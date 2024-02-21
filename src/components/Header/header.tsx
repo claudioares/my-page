@@ -12,11 +12,11 @@ export function MyHeader() {
         <Image src={logo} alt="logo" className="w-32"/>
 
         <ul className="flex h-[100%] justify-between w-96 items-center text-green_clean text-sm">
-          <li><Link href={''} className="text-pink-700 underline">Home</Link></li>
-          <li><Link href={''} className="hover:text-pink-700 hover:underline">Projetos</Link></li>
+          <li><Link href='/' className="text-pink-700 underline">Home</Link></li>
+          <li><Link href='/projetos' className="hover:text-pink-700 hover:underline">Projetos</Link></li>
           <li><Link href={''} className="hover:text-pink-700 hover:underline">Formação</Link></li>
           <li><Link href={''} className="hover:text-pink-700 hover:underline">Jogos</Link></li>
-          <li><Link href={''} className="hover:text-pink-700 hover:underline">Blog</Link></li>
+          <li><Link href='/blog' className="hover:text-pink-700 hover:underline">Blog</Link></li>
         </ul>
 
         <div className="w-auto flex gap-4">
