@@ -1,5 +1,7 @@
 import Image from 'next/image';
 import logo from '../../../public/logo.svg';
+import Link from 'next/link';
+
 
 export function Footer () {
     return(
@@ -10,13 +12,13 @@ export function Footer () {
                     <div className='flex flex-col items-center justify-center h-auto w-full border-l-2 '>
                         <ul>
                             <li>
-                                <a href="">claudiojasoares.dev@gmail.com</a>
+                                <Link href="mailto:claudiojasoares.dev@gmail.com" target='_blank'>claudiojasoares.dev@gmail.com</Link>
                             </li>
                             <li>
-                                <a href="">jas.code@yahoo.com</a>
+                                <Link href="mailto:jas.code@yahoo.com" target='_blank'>jas.code@yahoo.com</Link>
                             </li>
                             <li>
-                                <a href="">jascode.facebook.com</a>
+                                <Link href="">jascode.facebook.com</Link>
                             </li>
                         </ul>
                     </div>
