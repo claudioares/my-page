@@ -4,14 +4,13 @@ import logo from '../../../public/logo.svg';
 import Link from 'next/link';
 import { Button } from "@/components/ui/button"
 import { EnvelopeOpenIcon, GitHubLogoIcon, LinkedInLogoIcon } from "@radix-ui/react-icons"
-import { useEffect, useState } from "react";
+import { usePathname } from "next/navigation";
 
 
 
 export function MyHeader() {
 
-  const [pathname, setPathname] = useState('home');
-  
+  const pathname = usePathname()  
 
   return (
     <>
@@ -19,22 +18,22 @@ export function MyHeader() {
         <Image src={logo} alt="logo" className="w-32"/>
 
         <ul className="flex h-[100%] justify-between w-96 items-center text-green_clean text-sm">
-          {pathname === 'home' ? 
-            <li><Link onClick={()=>setPathname('home')} href='/' className="text-pink-700 underline">Home</Link></li>
+          {pathname === '/' ? 
+            <li><Link  href='/' className="text-pink-700 underline">Home</Link></li>
             :
-            <li><Link onClick={()=>setPathname('home')} href='/' className="hover:text-pink-700 hover:underline">Home</Link></li>
+            <li><Link  href='/' className="hover:text-pink-700 hover:underline">Home</Link></li>
           }
           
-          {pathname === 'games' ? 
-            <li><Link onClick={()=>setPathname('games')} href='/games' className="text-pink-700 underline">Jogos</Link></li>
+          {pathname === '/games' ? 
+            <li><Link href='/games' className="text-pink-700 underline">Jogos</Link></li>
             :
-            <li><Link onClick={()=>setPathname('games')} href='/games' className="hover:text-pink-700 hover:underline">Jogos</Link></li>
+            <li><Link href='/games' className="hover:text-pink-700 hover:underline">Jogos</Link></li>
           }
 
-          {pathname === 'blog' ? 
-            <li><Link onClick={()=>setPathname('blog')} href='/blog' className="text-pink-700 underline">Blog</Link></li>
+          {pathname === '/blog' ? 
+            <li><Link href='/blog' className="text-pink-700 underline">Blog</Link></li>
             :
-            <li><Link onClick={()=>setPathname('blog')} href='/blog' className="hover:text-pink-700 hover:underline">Blog</Link></li>
+            <li><Link href='/blog' className="hover:text-pink-700 hover:underline">Blog</Link></li>
           }
 
         </ul>
