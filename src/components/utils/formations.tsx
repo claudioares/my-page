@@ -18,28 +18,36 @@ const listTFormations = [
         entitie: 'Cubos Academy',
         description: `Formação em Desenvolvimento de software de 8 meses, com enfase em
         Desenvolvimento web`,
-        stacks: [htmlIcon, cssIcon, jsIcon, reactIcon, nodeIcon, postgresqlIcon]
+        stacks: {
+            list:[htmlIcon, cssIcon, jsIcon, reactIcon, nodeIcon, postgresqlIcon]
+        }
     },
     {
         id: '02',
         entitie: 'Digital Innovation One',
         description: `Aprendi desdo o básico do html ate typescript. Raciocinio lógico e pensamento computacional`,
-        stacks: [htmlIcon, cssIcon, jsIcon, reactIcon, nodeIcon]
+        stacks: {
+            list: [htmlIcon, cssIcon, jsIcon, reactIcon, nodeIcon]
+        }
     },
     {
         id: '03',
         entitie: 'Rocketseat',
         description: `Programação orientada a objeto, construçoes de apis com princípios do SOLID, tailwind
         e ultilizar bibliotecas Ui`,
-        stacks: [htmlIcon, tailwindIcon, tsIcon, reactIcon, nodeIcon, mongoIcon]
+        stacks: {
+            list: [htmlIcon, tailwindIcon, tsIcon, reactIcon, nodeIcon, mongoIcon]
+        }
     },
     {
-        id: '03',
+        id: '04',
         entitie: 'Cruzeiro do Sul/UNICID',
         description: `Graduação em Inteligencia Artificial, estou no segundo periodo e estou estudando 
         ciencias de analise de dados, arvore de desisão, listas, pilhas e conteúdos relacionados a manipulação
         dados`,
-        stacks: [pythonIcon]
+        stacks: {
+            list: [pythonIcon]
+        }
     },
 ];
 

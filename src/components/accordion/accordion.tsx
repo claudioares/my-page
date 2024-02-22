@@ -10,29 +10,31 @@ import Image from 'next/image';
 
 export default function AccordionExpandDefault() {
 
-  return (
-    <>
-        {listTFormations.map(data => (
-            <Accordion key={data.id}>
-                <AccordionSummary
-                expandIcon={<ExpandMoreIcon />}
-                aria-controls="panel1-content"
-                id="panel1-header"
-                >
-                <Typography>{data.entitie}</Typography>
-                </AccordionSummary>
-                <AccordionDetails>
-                <Typography>
-                    {data.description}
-                </Typography>
-                <div className='flex w-auto gap-4 mt-4'>
-                    {data.stacks.map(icon => (
-                        <Image src={icon} alt='Icone da stack' />
-                    ))}
-                </div>
-                </AccordionDetails>
-            </Accordion>
-        ))}
-    </>
-  );
+    let key = 0;
+
+    return (
+        <>
+            {listTFormations.map(data => (
+                <Accordion key={data.id}>
+                    <AccordionSummary
+                        expandIcon={<ExpandMoreIcon />}
+                        aria-controls="panel1-content"
+                        id="panel1-header"
+                    >
+                        <Typography>{data.entitie}</Typography>
+                    </AccordionSummary>
+                    <AccordionDetails>
+                        <Typography>
+                            {data.description}
+                        </Typography>
+                        <div className='flex w-auto gap-4 mt-4'>
+                            {data.stacks.list.map(icon => (
+                                <Image key={key += 1} src={icon} alt='Icone da stack' />
+                            ))}
+                        </div>
+                    </AccordionDetails>
+                </Accordion>
+            ))}
+        </>
+    );
 }

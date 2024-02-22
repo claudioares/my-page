@@ -15,33 +15,39 @@ import ImageNext from "next/image";
 
 const images = [
   {
+    id: '01',
     url: pj01,
     title: 'Projeto 01',
     width: '33.3%',
   },
   {
+    id: '02',
     url: pj02,
     title: 'Projeto 02',
     width: '33.3%',
   },
   {
+    id: '03',
     url: pj03,
     title: 'Projeto 03',
     width: '33.3%',
   },
   {
+    id: '04',
     url: pj04,
     title: 'Projeto 04',
     width: '33.3%',
   },
   {
+    id: '05',
     url: pj05,
-    title: 'Projeto 04',
+    title: 'Projeto 05',
     width: '33.3%',
   },
   {
+    id: '06',
     url: pj06,
-    title: 'Projeto 04',
+    title: 'Projeto 06',
     width: '33.3%',
   },
 ];
@@ -116,7 +122,7 @@ export function Card() {
       {images.map((image) => (
         <ImageButton
           focusRipple
-          key={image.title}
+          key={image.id}
           style={{
             width: image.width,
           }}
