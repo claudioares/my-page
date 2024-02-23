@@ -39,7 +39,7 @@ export function MyHeader() {
         </ul>
 
         <div className="w-auto flex gap-4">
-          <Link href="mailto:claudiojasoares.dev@gmail.com"><Button className="w-24 h-6 bg-pink-900 flex items-center justify-center text-[0.5rem] rounded-[1rem] hover:bg-slate-900">
+          <Link href="mailto:jas.code@yahoo.com"><Button className="w-24 h-6 bg-pink-900 flex items-center justify-center text-[0.5rem] rounded-[1rem] hover:bg-slate-900">
             <EnvelopeOpenIcon className="mr-2 h-3 w-3" /> Email
           </Button></Link>
           <Link href="https://github.com/claudioares?tab=repositories" target="_blank"><Button className="w-24 h-6 bg-pink-900 flex items-center justify-center text-[0.5rem] rounded-[1rem] hover:bg-slate-900">
