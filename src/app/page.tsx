@@ -7,7 +7,6 @@ import { Modal } from "@/components/modal/modal";
 import logo from '../../public/logo.svg';
 import AccordionExpandDefault from "@/components/accordion/accordion";
 import Image from "next/image";
-import { Footer } from "@/components/footer/footer";
 import imgHead from '../../public/imagensDecorations/image (4).png'
 import imgAcordion from '../../public/imagensDecorations/image (9).png'
 import { BtnFreelancer } from "@/components/btnFreelancer/btnFreelancer";
@@ -94,7 +93,6 @@ export default function Home() {
           </form>
         </div>
       </div>
-      <Footer />
       <BasicSpeedDial />
       <Modal />
     </div>

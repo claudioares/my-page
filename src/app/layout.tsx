@@ -4,6 +4,7 @@ import "./globals.css";
 import { MyHeader } from "@/components/Header/header";
 import { AppRouterCacheProvider } from '@mui/material-nextjs/v13-appRouter';
 import ContextProvider from "@/components/contextApi/contextApi";
+import { Footer } from "@/components/footer/footer";
 
 const ubuntu = Ubuntu({
   subsets: ["latin"],
@@ -27,6 +28,7 @@ export default function RootLayout({
           <AppRouterCacheProvider>
             <MyHeader />
             {children}
+            <Footer />
           </AppRouterCacheProvider>
         </ContextProvider>
       </body>
