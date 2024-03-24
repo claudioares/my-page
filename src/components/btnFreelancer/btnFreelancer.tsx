@@ -1,10 +1,10 @@
 'use client'
+import { useContext } from "react";
+import { ContextApi } from "../contextApi/contextApi";
 
 export function BtnFreelancer () {
-    const handleHiperlinkToFormContacts = () =>{
-        const elementSelect = document.getElementById('contact');
-        elementSelect?.scrollIntoView({ behavior: 'smooth' });
-    }
+ 
+    const {handleHiperlinkTo} = useContext(ContextApi);
     return(
         <>
             <button 
@@ -18,7 +18,7 @@ export function BtnFreelancer () {
                 justify-center 
                 animate-bounce
                 cursor-pointer"
-                onClick={()=>handleHiperlinkToFormContacts()}
+                onClick={()=>handleHiperlinkTo('contact')}
             >Contato para freelancer</button>
         </>
     )

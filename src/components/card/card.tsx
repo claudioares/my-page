@@ -118,7 +118,7 @@ const ImageMarked = styled('span')(({ theme }) => ({
 
 export function Card() {
   return (
-    <Box sx={{ display: 'flex', flexWrap: 'wrap', minWidth: 300, width: '100%' }}>
+    <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center',  flexWrap: 'wrap', minWidth: 300, width: '100%' }} id="projects">
       {images.map((image) => (
         <ImageButton
           focusRipple

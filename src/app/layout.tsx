@@ -24,13 +24,13 @@ export default function RootLayout({
   return (
     <html lang="pt-br">
       <body className={ubuntu.className}>
-        <ContextProvider>
-          <AppRouterCacheProvider>
+        <AppRouterCacheProvider>
+          <ContextProvider>
             <MyHeader />
             {children}
             <Footer />
-          </AppRouterCacheProvider>
-        </ContextProvider>
+          </ContextProvider>
+        </AppRouterCacheProvider>
       </body>
     </html>
   );
