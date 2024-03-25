@@ -44,7 +44,7 @@ const listInfoProjects : IListInfoProjectsType[] = [
         }
     },
     {
-        id: '01',
+        id: '02',
         name: 'Aplicação de manipulação de clientes',
         team: `
         Projeto pessoal que desenvolvi para estudo de caso de algumas tecnologias

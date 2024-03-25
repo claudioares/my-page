@@ -10,6 +10,7 @@ import listInfoProjects from "../utils/projects";
 export function Curriculum () {
     const { setSelectIcon } = useContext(ContextApi);
 
+
     return(
         <>
             <div className="relative flex flex-col w-[70%] min-h-[100%] border gap-4 p-8 mt-20 pb-20 text-black bg-white overflow-y-scroll">
@@ -31,7 +32,8 @@ export function Curriculum () {
 
                 <h1 className="text-2xl font-semibold">Projetos:</h1>
                 {listInfoProjects.map((info)=>(
-                    <SectionProjects 
+                    <SectionProjects
+                        key={info.id}
                         id={info.id}
                         name={info.name}
                         team={info.team}
