@@ -5,15 +5,19 @@ import { SectionFormation } from "./sections/Formations";
 import { SectionProjects } from "./sections/projects";
 import { SectionTecnology } from "./sections/tecs";
 import listInfoProjects from "../utils/projects";
+import Button from "@mui/material/Button";
 
 
 export function Curriculum () {
     const { setSelectIcon } = useContext(ContextApi);
 
+    function handlePrintOut () {
+        window.print();
+    }
 
     return(
         <>
-            <div className="relative flex flex-col w-[70%] min-h-[100%] border gap-4 p-8 mt-20 pb-20 text-black bg-white overflow-y-scroll">
+            <div id="curriculum" className="relative flex flex-col w-[70%] min-h-[100%] border gap-4 p-8 mt-20 pb-20 text-black bg-white overflow-y-scroll">
                 <div className="flex gap-4 absolute">
                     <span onClick={()=>setSelectIcon('')} className="text-xl cursor-pointer">X</span>
                 </div>
@@ -45,6 +49,8 @@ export function Curriculum () {
                 ))}
 
                 <SectionTecnology />
+
+                <Button onClick={()=>handlePrintOut()}>Imprimir</Button>
             </div>
         </>
     )
