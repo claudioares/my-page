@@ -1,4 +1,5 @@
 "use client"
+import { StaticImageData } from "next/image";
 import { ReactNode, createContext, useState } from "react";
 
 
@@ -20,9 +21,28 @@ export default function ContextProvider ({children}: {children: ReactNode}) {
         elementSelect?.scrollIntoView({ behavior: 'smooth' });
     }
 
+    // infoblog
+    interface IBlogAPIProfile {
+        id: string,
+        data: string,
+        title: string,
+        summary: string,
+        contentInit: string,
+        contentBlog: string,
+        contentEnd: string,
+        visualizations: string,
+        comments: string,
+        commentsqnt: string,
+        liks: string,
+        img: string | StaticImageData
+    }
+
+    const [contentInfoBlog, setContentInfoBlog] = useState<IBlogAPIProfile>();
+
     return(
         <ContextApi.Provider value={{
-            selectIcon, setSelectIcon, handleHiperlinkTo
+            selectIcon, setSelectIcon, handleHiperlinkTo,
+            contentInfoBlog, setContentInfoBlog
         }}>
             {children}
         </ContextApi.Provider>

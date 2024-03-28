@@ -6,7 +6,7 @@ import Link from 'next/link';
 export function Footer () {
     return(
         <>
-            <div className='flex w-full h-56 bg-zinc-950 text-white justify-evenly items-center pl-44'>
+            <div className='flex w-full h-44 bg-zinc-950 text-white justify-evenly items-center pl-44'>
                 <Image className='w-44' src={logo} alt='Logotipo' />
                 <div className=' flex flex-col items-center justify-center w-[50%] h-full'>
                     <div className='flex flex-col items-center justify-center h-auto w-full border-l-2 '>
