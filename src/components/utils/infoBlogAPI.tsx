@@ -88,7 +88,12 @@ const APIblog:IBlogAPIProfile[] = [
              odit doloribus, incidunt perferendis odio nesciunt vel.
         `,
         visualizations: '0',
-        comments: '',
+        comments: `
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+            Nihil, minus impedit. Accusantium velit aliquid,
+            sit beatae repellat error nobis asperiores, dicta, 
+            facere sed sapiente? 4
+        `,
         commentsqnt: "0",
         liks: '2',
         img: blogimg1
@@ -164,7 +169,7 @@ const APIblog:IBlogAPIProfile[] = [
         visualizations: '0',
         comments: '',
         commentsqnt: "0",
-        liks: '2',
+        liks: '7',
         img: blogimg2
     }
 ];
