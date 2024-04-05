@@ -4,7 +4,7 @@ import { ContextApi } from "../contextApi/contextApi";
 import { SectionFormation } from "./sections/Formations";
 import { SectionProjects } from "./sections/projects";
 import { SectionTecnology } from "./sections/tecs";
-import listInfoProjects from "../utils/projects";
+import listInfoProjects from "../utils/curriculum";
 import Button from "@mui/material/Button";
 
 

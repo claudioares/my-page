@@ -17,9 +17,6 @@ export function Footer () {
                             <li>
                                 <Link href="mailto:jas.code@yahoo.com" target='_blank'>jas.code@yahoo.com</Link>
                             </li>
-                            <li>
-                                <Link href="">jascode.facebook.com</Link>
-                            </li>
                         </ul>
                     </div>
                 </div>

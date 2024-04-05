@@ -24,7 +24,7 @@ export default function LayoutBlog () {
                     <p>{contentInfoBlog.contentEnd}</p>
                 </div>
 
-                <div className="flex flex-col gap-4 w-full h-auto mt-28">
+                {/* <div className="flex flex-col gap-4 w-full h-auto mt-28">
                     <form action="" className="flex flex-col gap-4 w-[65%]">
                         <h1>Qual seu nome?</h1>
                         <input type="text" className="w-[70%] h-8 text-black px-4" />
@@ -39,7 +39,7 @@ export default function LayoutBlog () {
                             <p>{contentInfoBlog.comments}</p>
                         </div>
                     </div>
-                </div>
+                </div> */}
             </div>
         </>
     )

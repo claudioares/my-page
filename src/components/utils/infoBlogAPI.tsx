@@ -18,6 +18,7 @@ interface IBlogAPIProfile {
     img: string | StaticImageData
 }
 
+
 const APIblog:IBlogAPIProfile[] = [
     {
         id: '01',

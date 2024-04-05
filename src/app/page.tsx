@@ -32,15 +32,15 @@ export default function Home() {
            </p>
            <Separator className="my-2 border-slate-300" />
            <div className="flex gap-4 w-auto">
-              <Button className="w-32 h-10 bg-pink-900 flex gap-1 animate-btnAnimation items-center justify-center text-[0.7rem] rounded-[0.8rem] hover:bg-slate-900">
+              {/* <Button className="w-32 h-10 bg-pink-900 flex gap-1 animate-btnAnimation items-center justify-center text-[0.7rem] rounded-[0.8rem] hover:bg-slate-900">
                 <ArrowRightIcon className="w-5 h-5 animate-pulse" />
                 Saiba mais
-              </Button>
+              </Button> */}
              <BtnHyperLink />
            </div>
           </div>
           <div className="flex items-center justify-center w-[50%] h-full">
-            <Image className="w-[25rem]" src={imgHead} alt="imagen de decotação" />
+            <Image className="w-[25rem] duration-1000" src={imgHead} alt="imagen de decotação" />
           </div>
         </div>
       </div>

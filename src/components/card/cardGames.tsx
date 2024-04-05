@@ -7,7 +7,6 @@ import game01 from '../../../public/gamesImagens/game01.jpg';
 import game02 from '../../../public/gamesImagens/game02.jpg';
 import game03 from '../../../public/gamesImagens/game03.jpg';
 import game04 from '../../../public/gamesImagens/game04.jpg';
-import game05 from '../../../public/gamesImagens/game05.jpg';
 
 
 import ImageNext from "next/image";
@@ -16,34 +15,32 @@ import ImageNext from "next/image";
 const images = [
   {
     id: '01',
-    url: game01,
+    img: game01,
     title: 'Game 01',
     width: '33.3%',
+    link: 'https://jogo-da-vela-game.netlify.app/'
   },
   {
     id: '02',
-    url: game02,
+    img: game02,
     title: 'Game 02',
     width: '33.3%',
+    link: 'https://cosmic-jelly-985f97.netlify.app/'
   },
   {
     id: '03',
-    url: game03,
+    img: game03,
     title: 'Game 03',
     width: '33.3%',
+    link: 'https://game-memory-naruto.vercel.app/'
   },
   {
     id: '04',
-    url: game04,
+    img: game04,
     title: 'Game 04',
     width: '33.3%',
+    link: 'https://relaxed-shortbread-8137dc.netlify.app/'
   },
-  {
-    id: '05',
-    url: game04,
-    title: 'Game 05',
-    width: '33.3%',
-  }
 ];
 
 const ImageButton = styled(ButtonBase)(({ theme }) => ({
@@ -121,9 +118,10 @@ export function CardGame() {
             width: image.width,
           }}
         >
-          <ImageNext fill={true} src={image.url} alt='Imagem do projeto' />
+          <ImageNext fill={true} src={image.img} alt='Imagem do projeto' />
           <ImageBackdrop className="MuiImageBackdrop-root" />
           <Image>
+          <a href={image.link} target='_blank'>
             <Typography
                 component="span"
                 variant="subtitle1"
@@ -138,6 +136,7 @@ export function CardGame() {
               {image.title}
               <ImageMarked className="MuiImageMarked-root" />
             </Typography>
+            </a>
           </Image>
         </ImageButton>
       ))}

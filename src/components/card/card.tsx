@@ -8,7 +8,7 @@ import pj02 from '../../../public/pro2.jpg';
 import pj03 from '../../../public/pro3.png';
 import pj04 from '../../../public/pro4.webp';
 import pj05 from '../../../public/pro5.png';
-import pj06 from '../../../public/pro6.webp';
+import pj06 from '../../../public/pro6.png';
 
 import ImageNext from "next/image";
 
@@ -19,36 +19,42 @@ const images = [
     url: pj01,
     title: 'Projeto 01',
     width: '33.3%',
+    link:""
   },
   {
     id: '02',
     url: pj02,
     title: 'Projeto 02',
     width: '33.3%',
+    link:""
   },
   {
     id: '03',
     url: pj03,
     title: 'Projeto 03',
     width: '33.3%',
+    link:""
   },
   {
     id: '04',
     url: pj04,
     title: 'Projeto 04',
     width: '33.3%',
+    link:""
   },
   {
     id: '05',
     url: pj05,
     title: 'Projeto 05',
     width: '33.3%',
+    link:""
   },
   {
     id: '06',
     url: pj06,
     title: 'Projeto 06',
     width: '33.3%',
+    link:"https://palcoonline.netlify.app/"
   },
 ];
 
@@ -130,6 +136,7 @@ export function Card() {
           <ImageNext fill={true} src={image.url} alt='Imagem do projeto' />
           <ImageBackdrop className="MuiImageBackdrop-root" />
           <Image>
+            <a href={image.link} target='_blank'>
             <Typography
                 component="span"
                 variant="subtitle1"
@@ -144,6 +151,7 @@ export function Card() {
               {image.title}
               <ImageMarked className="MuiImageMarked-root" />
             </Typography>
+            </a>
           </Image>
         </ImageButton>
       ))}

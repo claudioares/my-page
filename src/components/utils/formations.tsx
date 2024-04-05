@@ -49,6 +49,18 @@ const listTFormations = [
             list: [pythonIcon]
         }
     },
+    {
+        id: '05',
+        entitie: 'ALURA',
+        description: `
+            Projeto ONE. Um programa de educação e empregabilidade com objetivo social de 
+            capacitar pessoas em tecnologia e conectá-las com o 
+            mercado de trabalho por meio de empresas parceiras.
+        `,
+        stacks: {
+            list: [htmlIcon, cssIcon, jsIcon, reactIcon]
+        }
+    },
 ];
 
 
