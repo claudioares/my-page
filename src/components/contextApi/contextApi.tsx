@@ -39,10 +39,15 @@ export default function ContextProvider ({children}: {children: ReactNode}) {
 
     const [contentInfoBlog, setContentInfoBlog] = useState<IBlogAPIProfile>();
 
+    // Message sending success status
+    const [modalContactSucess, setModalContactSucess] = useState<Boolean>(false);
+
+
     return(
         <ContextApi.Provider value={{
             selectIcon, setSelectIcon, handleHiperlinkTo,
-            contentInfoBlog, setContentInfoBlog
+            contentInfoBlog, setContentInfoBlog,
+            modalContactSucess, setModalContactSucess
         }}>
             {children}
         </ContextApi.Provider>

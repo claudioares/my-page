@@ -5,19 +5,9 @@ import { ContextApi } from "../contextApi/contextApi";
 import { Curriculum } from "../curriculum/curricullum";
 import { Button } from "@/components/ui/button";
 
-function handleOnkeyDownCloseModal (Icon: any, func: (arg0: string) => void) {
-    document.onkeydown = (e)=>{
-        e.preventDefault();
-        if(e.key === 'Escape' && Icon){
-            func('');
-        }
-    }
-}
 
 export function Modal (){
     const { selectIcon, setSelectIcon } = useContext(ContextApi);
-
-    handleOnkeyDownCloseModal(selectIcon, setSelectIcon);
 
     return(
         <>

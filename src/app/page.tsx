@@ -1,5 +1,4 @@
-import { Button } from "@/components/ui/button";
-import { ArrowRightIcon } from "@radix-ui/react-icons";
+"use client"
 import { Separator } from "@/components/ui/separator";
 import { Card } from "@/components/card/card";
 import BasicSpeedDial from "@/components/speed/speed";
@@ -11,8 +10,15 @@ import imgAcordion from '../../public/imagensDecorations/image (9).png'
 import { BtnFreelancer } from "@/components/btnFreelancer/btnFreelancer";
 import { FormContact } from "@/components/formContact/formContact";
 import { BtnHyperLink } from "@/components/btnHyperLink/btnHyperlink";
+import { ModalSucessMessege } from "@/components/modal_sucess_messege/modal_sucess_messege";
+import { useContext } from "react";
+import { ContextApi } from "@/components/contextApi/contextApi";
 
 export default function Home() {
+
+  const {
+    modalContactSucess
+  } = useContext(ContextApi)
 
   return (
     <div className="flex flex-col bg-black">
@@ -32,10 +38,6 @@ export default function Home() {
            </p>
            <Separator className="my-2 border-slate-300" />
            <div className="flex gap-4 w-auto">
-              {/* <Button className="w-32 h-10 bg-pink-900 flex gap-1 animate-btnAnimation items-center justify-center text-[0.7rem] rounded-[0.8rem] hover:bg-slate-900">
-                <ArrowRightIcon className="w-5 h-5 animate-pulse" />
-                Saiba mais
-              </Button> */}
              <BtnHyperLink />
            </div>
           </div>
@@ -66,6 +68,7 @@ export default function Home() {
       <FormContact />
       <BasicSpeedDial />
       <Modal />
+      {modalContactSucess && <ModalSucessMessege />}
     </div>
   );
 }
