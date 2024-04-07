@@ -41,13 +41,15 @@ export default function ContextProvider ({children}: {children: ReactNode}) {
 
     // Message sending success status
     const [modalContactSucess, setModalContactSucess] = useState<Boolean>(false);
+    const [modalContactError, setModalContactError] = useState<Boolean>(false);
 
 
     return(
         <ContextApi.Provider value={{
             selectIcon, setSelectIcon, handleHiperlinkTo,
             contentInfoBlog, setContentInfoBlog,
-            modalContactSucess, setModalContactSucess
+            modalContactSucess, setModalContactSucess,
+            modalContactError, setModalContactError
         }}>
             {children}
         </ContextApi.Provider>

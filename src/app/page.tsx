@@ -13,11 +13,12 @@ import { BtnHyperLink } from "@/components/btnHyperLink/btnHyperlink";
 import { ModalSucessMessege } from "@/components/modal_sucess_messege/modal_sucess_messege";
 import { useContext } from "react";
 import { ContextApi } from "@/components/contextApi/contextApi";
+import { ModalErrorMessege } from "@/components/modal_error_messege/modal_error_messege";
 
 export default function Home() {
 
   const {
-    modalContactSucess
+    modalContactSucess, modalContactError
   } = useContext(ContextApi)
 
   return (
@@ -69,6 +70,7 @@ export default function Home() {
       <BasicSpeedDial />
       <Modal />
       {modalContactSucess && <ModalSucessMessege />}
+      {modalContactError && <ModalErrorMessege />}
     </div>
   );
 }
