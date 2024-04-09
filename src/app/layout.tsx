@@ -1,10 +1,9 @@
 import type { Metadata } from "next";
 import { Ubuntu } from "next/font/google";
 import "./globals.css";
-import { MyHeader } from "@/components/Header/header";
 import { AppRouterCacheProvider } from '@mui/material-nextjs/v13-appRouter';
 import ContextProvider from "@/components/contextApi/contextApi";
-import { Footer } from "@/components/footer/footer";
+
 
 const ubuntu = Ubuntu({
   subsets: ["latin"],
@@ -26,9 +25,7 @@ export default function RootLayout({
       <body className={ubuntu.className}>
         <AppRouterCacheProvider>
           <ContextProvider>
-            <MyHeader />
             {children}
-            <Footer />
           </ContextProvider>
         </AppRouterCacheProvider>
       </body>

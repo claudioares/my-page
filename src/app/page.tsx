@@ -14,6 +14,8 @@ import { ModalSucessMessege } from "@/components/modal_sucess_messege/modal_suce
 import { useContext } from "react";
 import { ContextApi } from "@/components/contextApi/contextApi";
 import { ModalErrorMessege } from "@/components/modal_error_messege/modal_error_messege";
+import { Footer } from "@/components/footer/footer";
+import { MyHeader } from "@/components/Header/header";
 
 export default function Home() {
 
@@ -22,7 +24,8 @@ export default function Home() {
   } = useContext(ContextApi)
 
   return (
-    <div className="flex flex-col bg-black">
+    <div className="flex flex-col bg-black gap-8">
+      <MyHeader />
       <div className="h-lvh lg:h-[40rem] max-w-full text-[#D9D9D9] bg-[url('../../public/bg.jpg')] bg-cover p-16 relative">
         <div className="flex bg-black opacity-95 w-full h-full absolute top-0 left-0 right-2">
           <div className="flex flex-col items-start justify-center w-[50%] h-full p-12 gap-4">
@@ -38,8 +41,9 @@ export default function Home() {
               eficientes e projetos bem-sucedidos como freelancer.
            </p>
            <Separator className="my-2 border-slate-300" />
-           <div className="flex gap-4 w-auto">
-             <BtnHyperLink />
+           <div className="flex gap-4 w-auto px-1">
+             <BtnHyperLink btnTo="projects" href="" />
+             <BtnHyperLink btnTo="Saiba mais ..." href="/aboutme"/>
            </div>
           </div>
           <div className="flex items-center justify-center w-[50%] h-full">
@@ -65,12 +69,13 @@ export default function Home() {
           <Image className="w-[25rem] pb-8" src={imgAcordion} alt="imagem de decoração" />
         </div>
       </div>
-
       <FormContact />
       <BasicSpeedDial />
       <Modal />
       {modalContactSucess && <ModalSucessMessege />}
       {modalContactError && <ModalErrorMessege />}
+
+      <Footer />
     </div>
   );
 }

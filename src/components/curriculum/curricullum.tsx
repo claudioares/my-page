@@ -11,9 +11,6 @@ import Button from "@mui/material/Button";
 export function Curriculum () {
     const { setSelectIcon } = useContext(ContextApi);
 
-    function handlePrintOut () {
-        window.print();
-    }
 
     return(
         <>
@@ -50,7 +47,6 @@ export function Curriculum () {
 
                 <SectionTecnology />
 
-                <Button onClick={()=>handlePrintOut()}>Imprimir</Button>
             </div>
         </>
     )

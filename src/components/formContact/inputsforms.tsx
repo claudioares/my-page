@@ -39,8 +39,10 @@ export function InputsForms () {
     if(email === "") {setEmailErro(true); setTimeout(()=>{setEmailErro(false)}, 2000); return};
     if(messege === "") {setMessegeErro(true); setTimeout(()=>{setMessegeErro(false)}, 2000); return};
 
+    const API_MESSEGE_URL:string = "https://my-page-api-contacts.onrender.com/messegeclient" as string;
+
     try {
-      const response = await fetch('http://localhost:3333/messegeclient', {
+      const response = await fetch(API_MESSEGE_URL, {
         method: 'POST',
         body: JSON.stringify(data),
         headers: {
