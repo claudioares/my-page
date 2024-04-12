@@ -1,53 +1,35 @@
 'use client'
-import Image from "next/image";
 import { Heart } from 'lucide-react';
 import Link from "next/link";
-import APIblog from "../../components/utils/infoBlogAPI";
-import { useContext, useEffect, useState } from "react";
 import { ContextApi } from "@/components/contextApi/contextApi";
-import { usePathname } from "next/navigation";
-import { StaticImport } from "next/dist/shared/lib/get-img-props";
 
-interface IDataType {
-    conclusion: string,
-    createdAt: string,
-    development: string,
-    id: string,
-    imgLink: string, 
-    introduction: string, 
-    subtitle: string, 
-    summary: string,
-    title: string 
-};
+import { Key, useContext, useEffect, useState } from "react";
 
 
-export default function Blog () {
 
-    const pathname = usePathname();
+export default function Blog() {
+
 
     const { setContentInfoBlog } = useContext(ContextApi);
-    const [data, setData] = useState<IDataType[]>();
-    let imgLink: string | StaticImport;
+    const [data, setDsata] = useState([]);
 
-    useEffect(()=>{
-        fetch('http://localhost:3333/apidatablog')
-            .then((res)=>res.json())
-            .then((data)=>{
-                setData(data);
-                imgLink = data.imgLink
-            })
+
+    useEffect(() => {
+        fetch('http://localhost:3333/blog')
+            .then((res) => res.json())
+            .then((response) => {
+                setDsata(response.data);
+            });
     }, []);
 
-    if (!data) return <p>No profile data</p>
 
-
-    return(
+    return (
         <>
             <div className="relative flex flex-col items-center justify-center w-full h-auto pt-24 pb-16 gap-4 text-white bg-black">
-                {data.map((inf,index)=>(
-                    <div key={index} className="flex w-[75%] h-80 border bg-black opacity-85 hover:bg-none hover:opacity-100">
+                {data.map((inf:any)=>(
+                    <div key={inf.id} className="flex w-[75%] h-80 border bg-black opacity-85 hover:bg-none hover:opacity-100">
                         <div className="w-[40%] h-full">
-                            <Image className="w-full h-full" src={imgLink} alt="imagem do blog" />
+                            <img className="w-full h-full" src={inf.Image[0].url} alt="imagem do blog" />
                         </div>
                         <div className="bg-white text-black hover:text-cyan-700 flex flex-col justify-evenly w-[60%] h-full p-14 gap-4">
                             <span>{inf.createdAt}</span>

@@ -42,7 +42,7 @@ export function InputsForms () {
     const API_MESSEGE_URL:string = "https://my-page-api-contacts.onrender.com/messegeclient" as string;
 
     try {
-      const response = await fetch(API_MESSEGE_URL, {
+      const response = await fetch(API_MESSEGE_URL || "https://my-page-api-contacts.onrender.com/messegeclient" , {
         method: 'POST',
         body: JSON.stringify(data),
         headers: {

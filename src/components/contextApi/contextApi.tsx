@@ -24,18 +24,21 @@ export default function ContextProvider ({children}: {children: ReactNode}) {
     // infoblog
     interface IBlogAPIProfile {
         id: string,
-        data: string,
-        title: string,
-        summary: string,
-        contentInit: string,
-        contentBlog: string,
-        contentEnd: string,
-        visualizations: string,
-        comments: string,
-        commentsqnt: string,
-        liks: string,
-        img: string | StaticImageData
+    title: string,
+    subtitle: string,
+    introduction: string,
+    development: string,
+    conclusion: string,
+    createdAt: string,
+    Image:{
+        id: string,
+        name: string,
+        url: string,
+        blogId: string,
+        createdAt: string
+    } 
     }
+
 
     const [contentInfoBlog, setContentInfoBlog] = useState<IBlogAPIProfile>();
 

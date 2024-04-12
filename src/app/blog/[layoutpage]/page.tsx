@@ -1,27 +1,28 @@
 'use client'
 import { ContextApi } from "@/components/contextApi/contextApi";
-import Image from "next/image";
 import Link from "next/link";
 import {useContext} from "react"
 export default function LayoutBlog () {
 
     const { contentInfoBlog } = useContext(ContextApi);
 
+
+
     return (
         <>
             <div className="w-full h-auto bg-black bg-opacity-85 text-white flex flex-col py-24 px-10 gap-8 items-center">
                 <Link href="/blog" className="cursor-pointer font-light italic hover:text-slate-100 hover:underline">Todos os posts</Link>
                 <div className="w-full h-auto flex flex-col gap-8 items-center">
-                    <span>{contentInfoBlog.data}</span>
+                    <span>jan 2024</span>
                     <h1 className="text-3xl">{contentInfoBlog.title}</h1>
                     <p>{contentInfoBlog.summary}</p>
-                    <Image className="w-[40rem]" src={contentInfoBlog.img} alt="Imagem referente ao cnteúdo do blog" />
+                    <img className="w-[40rem]" src={contentInfoBlog.Image[0].url} alt="Imagem referente ao cnteúdo do blog" />
                     <p>{contentInfoBlog.contentInit}</p>
 
                     <h2 className="text-2xl">{contentInfoBlog.subtitle}</h2>
                     <p>{contentInfoBlog.contentBlog}</p>
                     <h2 className="text-2xl">Considerações finais</h2>
-                    <p>{contentInfoBlog.contentEnd}</p>
+                    <p>{contentInfoBlog.conclusion}</p>
                 </div>
 
                 {/* <div className="flex flex-col gap-4 w-full h-auto mt-28">
