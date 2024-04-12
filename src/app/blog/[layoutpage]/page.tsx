@@ -1,5 +1,5 @@
 'use client'
-import { getLocalStorage, removeLocalStorage } from "@/components/utils/localstorage";
+import { getLocalStorage } from "@/components/utils/localstorage";
 import { StaticImport } from "next/dist/shared/lib/get-img-props";
 import Image from "next/image";
 import Link from "next/link";
@@ -51,7 +51,6 @@ export default function LayoutBlog () {
                 <Link
                     href="/blog" 
                     className="cursor-pointer font-light italic hover:text-slate-100 hover:underline"
-                    onClick={()=>removeLocalStorage()}
                 >Todos os posts</Link>
                 <div className="w-full h-auto flex flex-col gap-8 items-center">
                     <span>{dateBlogPublic}</span>

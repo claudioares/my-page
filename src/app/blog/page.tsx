@@ -2,8 +2,7 @@
 import { Heart } from 'lucide-react';
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import { removeLocalStorage, setLocalStorage } from '@/components/utils/localstorage';
-import { usePathname } from "next/navigation";
+import { setLocalStorage } from '@/components/utils/localstorage';
 import { MyHeader } from '@/components/Header/header';
 import Image from 'next/image';
 
@@ -11,8 +10,6 @@ import Image from 'next/image';
 
 export default function Blog() {
 
-
-    const pathName = usePathname();
     const [data, setDsata] = useState([]);
 
 
@@ -25,17 +22,13 @@ export default function Blog() {
     }, []);
 
 
-    if(pathName === "/blog") {
-        removeLocalStorage()
-    }
-
 
     return (
         <>
             <div className="relative flex flex-col items-center justify-center w-full h-screen pt-24 pb-16 gap-4 text-white bg-black">
                 <MyHeader />
                 {data.map((inf:any)=>(
-                    <div key={inf.id} className="flex w-[75%] h-80 border bg-black opacity-85 hover:bg-none hover:opacity-100">
+                    <div key={inf.id} className="flex w-[75%] h-64 border bg-black opacity-85 hover:bg-none hover:opacity-100">
                         <div className="w-[40%] h-full">
                             <Image className="w-full h-full" width={640} height={100} src={inf.Image[0].url || ""} alt="imagem do blog" />
                         </div>
@@ -50,16 +43,6 @@ export default function Blog() {
                                 onClick={()=>setLocalStorage(inf.id, inf.Image[0].url, inf.createdAt.split('-', 2).reverse().join('/'))}
                                 >{inf.title}</Link>
                             <p className="w-full max-h-20 truncate">{inf.subtitle}</p>
-                            <div className="flex justify-between">
-                                <div className="flex gap-4">
-                                    <span>0 vizualizações</span>
-                                    <span>0 comentários</span>
-                                </div>
-                                <div className="flex gap-1">
-                                    0
-                                    <Heart color="red" className="cursor-pointer" />
-                                </div>
-                            </div>
                         </div>
                     </div>
                 ))}
