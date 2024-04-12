@@ -1,46 +1,68 @@
 'use client'
-import { ContextApi } from "@/components/contextApi/contextApi";
+import { getLocalStorage, removeLocalStorage } from "@/components/utils/localstorage";
 import Link from "next/link";
-import {useContext} from "react"
+import { useEffect, useState} from "react"
+
+
+    // infoblog
+    interface IBlogAPIProfile{
+        id: string,
+        title: string,
+        subtitle: string,
+        introduction: string,
+        development: string,
+        conclusion: string,
+        createdAt: string,
+        Image:[
+            {
+                id: string,
+                name: string,
+                url: string,
+                blogId: string,
+                createdAt: string,
+            } 
+        ]
+    }
+
+
+
 export default function LayoutBlog () {
 
-    const { contentInfoBlog } = useContext(ContextApi);
+    const [data, setData] = useState<IBlogAPIProfile>({} as IBlogAPIProfile);
+    let imgBlog:string | undefined = getLocalStorage('image') as string | undefined;
+    const idBlogStorage = getLocalStorage('id');
+    const dateBlogPublic = getLocalStorage('date');
 
+
+    useEffect(() => {
+        fetch(`https://my-page-api-blog.onrender.com/blog/id?id=${idBlogStorage}`)
+            .then((res) => res.json())
+            .then((response) => {
+                setData(response.data);
+            });
+    }, []);
 
 
     return (
         <>
             <div className="w-full h-auto bg-black bg-opacity-85 text-white flex flex-col py-24 px-10 gap-8 items-center">
-                <Link href="/blog" className="cursor-pointer font-light italic hover:text-slate-100 hover:underline">Todos os posts</Link>
+                <Link
+                    href="/blog" 
+                    className="cursor-pointer font-light italic hover:text-slate-100 hover:underline"
+                    onClick={()=>removeLocalStorage()}
+                >Todos os posts</Link>
                 <div className="w-full h-auto flex flex-col gap-8 items-center">
-                    <span>jan 2024</span>
-                    <h1 className="text-3xl">{contentInfoBlog.title}</h1>
-                    <p>{contentInfoBlog.summary}</p>
-                    <img className="w-[40rem]" src={contentInfoBlog.Image[0].url} alt="Imagem referente ao cnteúdo do blog" />
-                    <p>{contentInfoBlog.contentInit}</p>
+                    <span>{dateBlogPublic}</span>
+                    <h1 className="text-3xl">{data.title}</h1>
+                    <p>{data.subtitle}</p>
+                    <img className="w-[40rem]" src={imgBlog} alt="Imagem referente ao cnteúdo do blog" />
+                    <p>{data.introduction}</p>
 
-                    <h2 className="text-2xl">{contentInfoBlog.subtitle}</h2>
-                    <p>{contentInfoBlog.contentBlog}</p>
+                    <h2 className="text-2xl">{data.subtitle}</h2>
+                    <p>{data.development}</p>
                     <h2 className="text-2xl">Considerações finais</h2>
-                    <p>{contentInfoBlog.conclusion}</p>
+                    <p>{data.conclusion}</p>
                 </div>
-
-                {/* <div className="flex flex-col gap-4 w-full h-auto mt-28">
-                    <form action="" className="flex flex-col gap-4 w-[65%]">
-                        <h1>Qual seu nome?</h1>
-                        <input type="text" className="w-[70%] h-8 text-black px-4" />
-
-                        <p>Deixe seu comentário</p>
-                        <textarea className="w-[70%] h-36 resize-none text-black text-start p-4"></textarea>
-                    </form>
-                    <div className="flex flex-col gap-4 w-[45%]">
-                        <h1>Comentários:</h1>
-                        <div>
-                            <h2 className="text-base font-semibold">nome do usuario</h2>
-                            <p>{contentInfoBlog.comments}</p>
-                        </div>
-                    </div>
-                </div> */}
             </div>
         </>
     )
