@@ -50,19 +50,19 @@ export default function LayoutBlog () {
             <div className="w-full h-auto bg-black bg-opacity-85 text-white flex flex-col py-24 px-10 gap-8 items-center">
                 <Link
                     href="/blog" 
-                    className="cursor-pointer font-light italic hover:text-slate-100 hover:underline"
+                    className="cursor-pointer font-light italic hover:text-slate-100 hover:underline text-yellow-300"
                 >Todos os posts</Link>
-                <div className="w-full h-auto flex flex-col gap-8 items-center">
+                <div className="w-[80%] h-auto flex flex-col gap-8 items-center">
                     <span>{dateBlogPublic}</span>
                     <h1 className="text-3xl">{data.title}</h1>
-                    <p>{data.subtitle}</p>
+                    <p className="text-2xl">{data.subtitle}</p>
                     <Image className="w-[40rem]" width={640} height={100} src={imgBlog} alt="Imagem referente ao cnteúdo do blog" />
-                    <p>{data.introduction}</p>
+                    <p className="text-xl">{data.introduction}</p>
 
                     <h2 className="text-2xl">{data.subtitle}</h2>
-                    <p>{data.development}</p>
+                    <p className="text-xl">{data.development}</p>
                     <h2 className="text-2xl">Considerações finais</h2>
-                    <p>{data.conclusion}</p>
+                    <p className="text-xl">{data.conclusion}</p>
                 </div>
             </div>
         </>
