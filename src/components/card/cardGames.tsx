@@ -121,22 +121,22 @@ export function CardGame() {
           <ImageNext fill={true} src={image.img} alt='Imagem do projeto' />
           <ImageBackdrop className="MuiImageBackdrop-root" />
           <Image>
-          <a href={image.link} target='_blank'>
-            <Typography
-                component="span"
-                variant="subtitle1"
-                color="inherit"
-                sx={{
-                  position: 'relative',
-                  p: 4,
-                  pt: 2,
-                  pb: (theme) => `calc(${theme.spacing(1)} + 6px)`,
-                }}
-              >
-              {image.title}
-              <ImageMarked className="MuiImageMarked-root" />
-            </Typography>
-            </a>
+            <a href={image.link} target='_blank'>
+              <Typography
+                  component="span"
+                  variant="subtitle1"
+                  color="inherit"
+                  sx={{
+                    position: 'relative',
+                    p: 4,
+                    pt: 2,
+                    pb: (theme) => `calc(${theme.spacing(1)} + 6px)`,
+                  }}
+                >
+                {image.title}
+                <ImageMarked className="MuiImageMarked-root" />
+                </Typography>
+              </a>
           </Image>
         </ImageButton>
       ))}

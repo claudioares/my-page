@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 import { removeLocalStorage, setLocalStorage } from '@/components/utils/localstorage';
 import { usePathname } from "next/navigation";
 import { MyHeader } from '@/components/Header/header';
+import Image from 'next/image';
 
 
 
@@ -21,22 +22,22 @@ export default function Blog() {
             .then((response) => {
                 setDsata(response.data);
             });
-
-            if(pathName === "/blog") {
-                removeLocalStorage()
-            }
     }, []);
 
+
+    if(pathName === "/blog") {
+        removeLocalStorage()
+    }
 
 
     return (
         <>
-            <div className="relative flex flex-col items-center justify-center w-full h-auto pt-24 pb-16 gap-4 text-white bg-black">
+            <div className="relative flex flex-col items-center justify-center w-full h-screen pt-24 pb-16 gap-4 text-white bg-black">
                 <MyHeader />
                 {data.map((inf:any)=>(
                     <div key={inf.id} className="flex w-[75%] h-80 border bg-black opacity-85 hover:bg-none hover:opacity-100">
                         <div className="w-[40%] h-full">
-                            <img className="w-full h-full" src={inf.Image[0].url} alt="imagem do blog" />
+                            <Image className="w-full h-full" width={640} height={100} src={inf.Image[0].url || ""} alt="imagem do blog" />
                         </div>
                         <div className="bg-white text-black hover:text-cyan-700 flex flex-col justify-evenly w-[60%] h-full p-14 gap-4">
                             <span>{inf.createdAt.split('-', 2).reverse().join('/')}</span>

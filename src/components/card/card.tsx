@@ -99,6 +99,7 @@ const Image = styled('span')(({ theme }) => ({
   alignItems: 'center',
   justifyContent: 'center',
   color: theme.palette.common.white,
+
 }));
 
 const ImageBackdrop = styled('span')(({ theme }) => ({
@@ -148,9 +149,9 @@ export function Card() {
                   pb: (theme) => `calc(${theme.spacing(1)} + 6px)`,
                 }}
               >
-              {image.title}
-              <ImageMarked className="MuiImageMarked-root" />
-            </Typography>
+                {image.title}
+                <ImageMarked className="MuiImageMarked-root" />
+              </Typography>
             </a>
           </Image>
         </ImageButton>

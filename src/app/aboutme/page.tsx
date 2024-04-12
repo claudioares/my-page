@@ -9,7 +9,7 @@ export default function Aboutme () {
                 <header className="relative flex flex-col gap-6 w-full h-80 bg-sky-900 text-white px-56 py-10">
                     <h1 className="text-5xl">Sobre mim...</h1>
                     <div>___________</div>
-                    <p className="font-extralight text-base italic">"Com exceção de mudar o outro, tudo é possível!"</p>
+                    <p className="font-extralight text-base italic">&lsquo; Com exceção de mudar o outro, tudo é possível! &lsquo;</p>
                 </header>
                 <div className="flex h-auto items-center justify-center px-56 gap-10">
                     <Image src={imgMe} alt="Imagem cláudio soares" 
@@ -17,22 +17,7 @@ export default function Aboutme () {
                     />
                     <div className="p-4">
                         <p className="text-white">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
-                            Aperiam dolorem officia quaerat eum, quis deserunt blanditiis!
-                            Quae et amet quasi repellendus! Saepe quaerat odio odit iste 
-                            in ab commodi repellat.
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
-                            Aperiam dolorem officia quaerat eum, quis deserunt blanditiis!
-                            Quae et amet quasi repellendus! Saepe quaerat odio odit iste 
-                            in ab commodi repellat.
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
-                            Aperiam dolorem officia quaerat eum, quis deserunt blanditiis!
-                            Quae et amet quasi repellendus! Saepe quaerat odio odit iste 
-                            in ab commodi repellat.
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
-                            Aperiam dolorem officia quaerat eum, quis deserunt blanditiis!
-                            Quae et amet quasi repellendus! Saepe quaerat odio odit iste 
-                            in ab commodi repellat.
+                            Aqui escreverei algo sobre mim
                         </p>
                     </div>
                 </div>

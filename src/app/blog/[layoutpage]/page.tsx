@@ -1,5 +1,7 @@
 'use client'
 import { getLocalStorage, removeLocalStorage } from "@/components/utils/localstorage";
+import { StaticImport } from "next/dist/shared/lib/get-img-props";
+import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState} from "react"
 
@@ -29,7 +31,7 @@ import { useEffect, useState} from "react"
 export default function LayoutBlog () {
 
     const [data, setData] = useState<IBlogAPIProfile>({} as IBlogAPIProfile);
-    let imgBlog:string | undefined = getLocalStorage('image') as string | undefined;
+    let imgBlog:string | StaticImport = getLocalStorage('image') as string | StaticImport;
     const idBlogStorage = getLocalStorage('id');
     const dateBlogPublic = getLocalStorage('date');
 
@@ -40,7 +42,7 @@ export default function LayoutBlog () {
             .then((response) => {
                 setData(response.data);
             });
-    }, []);
+    });
 
 
     return (
@@ -55,7 +57,7 @@ export default function LayoutBlog () {
                     <span>{dateBlogPublic}</span>
                     <h1 className="text-3xl">{data.title}</h1>
                     <p>{data.subtitle}</p>
-                    <img className="w-[40rem]" src={imgBlog} alt="Imagem referente ao cnteúdo do blog" />
+                    <Image className="w-[40rem]" width={640} height={100} src={imgBlog} alt="Imagem referente ao cnteúdo do blog" />
                     <p>{data.introduction}</p>
 
                     <h2 className="text-2xl">{data.subtitle}</h2>
