@@ -3,12 +3,12 @@ import { styled } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import ButtonBase from '@mui/material/ButtonBase';
 import Typography from '@mui/material/Typography';
-import pj01 from '../../../public/img_apps/pro1.jpg';
-import pj02 from '../../../public/img_apps/pro2.jpg';
-import pj03 from '../../../public/img_apps/pro3.png';
-import pj04 from '../../../public/img_apps/pro4.jpg';
-import pj05 from '../../../public/img_apps/pro5.png';
-import pj06 from '../../../public/img_apps/pro6.png';
+import pj01 from '../../../src/assets/img_apps/pro1.jpg';
+import pj02 from '../../../src/assets/img_apps/pro2.jpg';
+import pj03 from '../../../src/assets/img_apps/pro3.png';
+import pj04 from '../../../src/assets/img_apps/pro4.jpg';
+import pj05 from '../../../src/assets/img_apps/pro5.png';
+import pj06 from '../../../src/assets/img_apps/pro6.png';
 
 import ImageNext from "next/image";
 
