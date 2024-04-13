@@ -17,7 +17,14 @@ export default function Aboutme () {
                     />
                     <div className="p-4">
                         <p className="text-white">
-                            Aqui escreverei algo sobre mim
+                        Olá, meu nome é Cláudio Soares, sou do Maranhão, de uma cidadezinha do interior onde o acesso a tecnologia ainda é escaço mas felizmente a própria tecnólogia, que estudo, me permitiu aprender e me desenvolver.
+Dizem que, às vezes, às limitações são impostas por você mesmo e cabe a cada um tentar superar essas limitações, todos os dias.
+Aprendi e aprendo programação através de cursos online, quase todos grátis; felizmente existem muito conteúdo, alguns meio desencontrados, mas, a gente pode organizar. Afinal esse é um dos trabalhos de um desenvolvedor, organizar e reorganizar as coisas; e no fim do dia é isso: Solucionar problemas.
+Comece na programação em 2021 com um programa de ensino, ministrado por um professor da UFMA, aos sabados com a linguagem Python.
+Alí foram meus primeiros passos, princípios básicos: Lógia de programação, tipos de variáves, arrays, algoritimos, reconhecimento de padrões, pensamento computacional... etc.
+Depois levei um tempo até descobrir uma linguagem e escolhi o javascript. Eu quis saber como fazer as interfaces que eu tanto adimirava, bom, essa parte vem de uma outra coisa que amo, que é o designer grafico.
+Já trabalhei como designer, criei logos, editei fotos, criei bunners, flys de festas, apresentações para comerciais. Não consegui permanecer na área de designer por falta de estrutura, tive de ir buscar outras formas de renda e isso tomava muito meu tempo.
+Voltando a programação... Tentei fazer um graduação em Engenharia de software e fiz ainda dois semestres com a linguagem C. Realmente aprendi muita coisa legal, principalmente a base de como as coisas funcionavem por debaixo dos panos, além do layourt, digamos que a estrutura lógica por baixo dos panos.
                         </p>
                     </div>
                 </div>
