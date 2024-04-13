@@ -3,12 +3,12 @@ import { styled } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import ButtonBase from '@mui/material/ButtonBase';
 import Typography from '@mui/material/Typography';
-import pj01 from '../../../public/pro1.webp';
-import pj02 from '../../../public/pro2.jpg';
-import pj03 from '../../../public/pro3.png';
-import pj04 from '../../../public/pro4.webp';
-import pj05 from '../../../public/pro5.png';
-import pj06 from '../../../public/pro6.png';
+import pj01 from '../../../public/img_apps/pro1.jpg';
+import pj02 from '../../../public/img_apps/pro2.jpg';
+import pj03 from '../../../public/img_apps/pro3.png';
+import pj04 from '../../../public/img_apps/pro4.jpg';
+import pj05 from '../../../public/img_apps/pro5.png';
+import pj06 from '../../../public/img_apps/pro6.png';
 
 import ImageNext from "next/image";
 
@@ -19,28 +19,28 @@ const images = [
     url: pj01,
     title: 'Projeto 01',
     width: '33.3%',
-    link:""
+    link:"https://personal-portifolio-page.netlify.app/"
   },
   {
     id: '02',
     url: pj02,
     title: 'Projeto 02',
     width: '33.3%',
-    link:""
+    link:"https://dricasalgados.netlify.app/"
   },
   {
     id: '03',
     url: pj03,
     title: 'Projeto 03',
     width: '33.3%',
-    link:""
+    link:"https://claudioares.github.io/text_decod/"
   },
   {
     id: '04',
     url: pj04,
     title: 'Projeto 04',
     width: '33.3%',
-    link:""
+    link:"https://devcodeconversor.netlify.app/"
   },
   {
     id: '05',
