@@ -31,6 +31,7 @@ export function InputsForms () {
   const [messege, setMessege] = useState<string>("");
   const [messegeErro, setMessegeErro] = useState<boolean>(false);
   const {setModalContactSucess, setModalContactError} = useContext(ContextApi);
+  const [loadingButton, setLoadingButton] = useState<boolean>(false)
   
   
   async function handleInputsForm (data:InputFormTypesSchema) {
@@ -38,6 +39,7 @@ export function InputsForms () {
     if(name === "") {setNameErro(true); setTimeout(()=>{setNameErro(false)}, 2000); return};
     if(email === "") {setEmailErro(true); setTimeout(()=>{setEmailErro(false)}, 2000); return};
     if(messege === "") {setMessegeErro(true); setTimeout(()=>{setMessegeErro(false)}, 2000); return};
+    setLoadingButton(true);
 
     const API_MESSEGE_URL:string = "https://my-page-api-contacts.onrender.com/messegeclient" as string;
 
@@ -59,6 +61,7 @@ export function InputsForms () {
         setName("");
         setEmail("");
         setMessege("");
+        setLoadingButton(false);
       }
     } catch (error) {
       console.log("Error during transaction. ", error)
@@ -76,7 +79,7 @@ export function InputsForms () {
 
   return(
     <>
-       <form onSubmit={handleSubmit(handleInputsForm)} className="w-[70%] h-auto flex flex-col gap-4 px-6 py-9">
+       <form className="w-[70%] h-auto flex flex-col gap-4 px-6 py-9">
             <div className="flex flex-col gap-2">
               <div className="flex gap-44">
                 <label htmlFor="name">Seu nome</label>
@@ -122,10 +125,20 @@ export function InputsForms () {
               />
             </div>
             <div className="flex w-full items-center justify-center">
+
+              {!loadingButton && 
               <button className={`
                 bg-green-700 w-36 h-12 rounded-xl
                 hover:bg-green-600
-              `}>Enviar</button>
+              `}
+              onClick={handleSubmit(handleInputsForm)}>Enviar</button>}
+
+              {loadingButton && 
+              <button className={`
+                bg-green-700 w-36 h-12 rounded-xl
+                hover:bg-green-600
+                animate-pulse duration-700
+              `}>Enviando...</button>}
             </div>
         </form>
     </>
