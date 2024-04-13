@@ -64,15 +64,7 @@ const ImageButton = styled(ButtonBase)(({ theme }) => ({
   },
 }));
 
-const ImageSrc = styled('span')({
-  position: 'absolute',
-  left: 0,
-  right: 0,
-  top: 0,
-  bottom: 0,
-  backgroundSize: 'cover',
-  backgroundPosition: 'center 40%',
-});
+
 
 const Image = styled('span')(({ theme }) => ({
   position: 'absolute',
@@ -84,6 +76,7 @@ const Image = styled('span')(({ theme }) => ({
   alignItems: 'center',
   justifyContent: 'center',
   color: theme.palette.common.white,
+  alt: ''
 }));
 
 const ImageBackdrop = styled('span')(({ theme }) => ({
