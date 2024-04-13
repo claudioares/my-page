@@ -80,20 +80,6 @@ const ImageButton = styled(ButtonBase)(({ theme }) => ({
 }));
 
 
-
-const Image = styled('span')(({ theme }) => ({
-  position: 'absolute',
-  left: 0,
-  right: 0,
-  top: 0,
-  bottom: 0,
-  display: 'flex',
-  alignItems: 'center',
-  justifyContent: 'center',
-  color: theme.palette.common.white,
-  alt: ''
-}));
-
 const ImageBackdrop = styled('span')(({ theme }) => ({
   position: 'absolute',
   left: 0,
@@ -128,7 +114,7 @@ export function Card() {
         >
           <ImageNext fill={true} src={image.url} alt='Imagem do projeto' />
           <ImageBackdrop className="MuiImageBackdrop-root" />
-          <Image>
+          <div>
             <a href={image.link} target='_blank'>
             <Typography
                 component="span"
@@ -145,7 +131,7 @@ export function Card() {
                 <ImageMarked className="MuiImageMarked-root" />
               </Typography>
             </a>
-          </Image>
+          </div>
         </ImageButton>
       ))}
     </Box>
