@@ -62,10 +62,8 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="h-[30rem] flex flex-col justify-center gap-4 bg-pink-950 text-white" id="projects">
-        <div className="flex items-center justify-center">
+      <div className="flex flex-col items-center justify-center h-auto py-2 bg-pink-950 text-white" id="projects">
           <Card />
-        </div>
       </div>
 
       <div className="min-h-[35rem] pl-16 flex justify-center items-center bg-black text-white" id="formations">
