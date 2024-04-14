@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { Button } from "@/components/ui/button"
 import { EnvelopeOpenIcon, GitHubLogoIcon, LinkedInLogoIcon } from "@radix-ui/react-icons"
 import { usePathname } from "next/navigation";
+import { MobileVersion } from "./mobile";
 
 
 
@@ -14,10 +15,15 @@ export function MyHeader() {
 
   return (
     <>
-      <header className="w-full h-16 bg-zinc-950 flex items-center justify-between px-28 text-zinc-200 fixed z-20 top-0">
+      <header className={
+        `
+          hidden w-full h-16 bg-zinc-950  items-center justify-between px-28 text-zinc-200 fixed z-20 top-0
+          md:flex
+        `
+      }>
         <Image src={logo} alt="logo" className="w-32"/>
 
-        <ul className="flex h-[100%] justify-between w-96 items-center text-green_clean text-sm">
+        <ul className="flex h-[100%] justify-around w-96 items-center text-green_clean text-sm">
           {pathname === '/' ? 
             <li><Link  href='/' className="text-pink-700 underline">Home</Link></li>
             :
@@ -50,6 +56,8 @@ export function MyHeader() {
           </Button></Link>
         </div>
       </header>
+
+      <MobileVersion />
     </>
   )
 }

@@ -60,7 +60,7 @@ export default function LayoutBlog () {
                     <p className="text-xl">{data.introduction}</p>
 
                     <h2 className="text-2xl">{data.subtitle}</h2>
-                    <p className="text-xl">{data.development}</p>
+                    <p className="text-xl leading-relaxed w-[80%]">{data.development}</p>
                     <h2 className="text-2xl">Considerações finais</h2>
                     <p className="text-xl">{data.conclusion}</p>
                 </div>
