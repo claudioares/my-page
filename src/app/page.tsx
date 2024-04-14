@@ -24,11 +24,17 @@ export default function Home() {
   } = useContext(ContextApi)
 
   return (
-    <div className="flex flex-col bg-black gap-8">
+    <div className={`
+      flex flex-col bg-black
+      md:gap-4
+    `}>
       <MyHeader />
       <div className="h-lvh lg:h-[40rem] max-w-full text-[#D9D9D9] bg-[url('../../public/bg.jpg')] bg-cover p-16 relative">
         <div className="flex bg-black opacity-95 w-full h-full absolute top-0 left-0 right-2">
-          <div className="flex flex-col items-start justify-center w-[50%] h-full p-12 gap-4">
+          <div className={`
+            flex flex-col items-start justify-center w-full h-full p-12 gap-4
+            md:w-[50%]
+          `}>
             <BtnFreelancer />
             <div>
               <h1 className="text-4xl font-semibold">Cláudio J. A. Soares</h1>
@@ -46,7 +52,11 @@ export default function Home() {
              <BtnHyperLink btnTo="Saiba mais ..." href="/aboutme"/>
            </div>
           </div>
-          <div className="flex items-center justify-center w-[50%] h-full">
+
+          <div className={`
+            hidden items-center justify-center w-[50%] h-full
+            md:flex
+          `}>
             <Image className="w-[25rem] duration-1000" src={imgHead} alt="imagen de decotação" />
           </div>
         </div>
