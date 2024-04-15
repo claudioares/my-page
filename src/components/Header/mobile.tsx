@@ -19,7 +19,7 @@ export function MobileVersion () {
         <>
             <header className={`
                 w-full h-16 bg-zinc-950 text-white flex items-center justify-between px-16 z-20
-                md:hidden
+                lg:hidden
             `}>
                 <button
                     className={`
@@ -34,10 +34,12 @@ export function MobileVersion () {
                 <section className={`
                     fixed flex flex-col-reverse gap-8 items-center justify-center bg-zinc-950 bg-opacity-80 bottom-0 w-full h-screen right-0
                     transition-all duration-1000
-                    md:hidden
+                    lg:hidden
                 `}>
 
-                    <div className="w-full h-auto py-8 px-8">
+                    <div className={`
+                        w-full h-auto py-8 px-8
+                    `}>
                         <Image src={logo} alt="logo" className="w-32"/>
                     </div>
 

@@ -18,7 +18,7 @@ export function MyHeader() {
       <header className={
         `
           hidden w-full h-16 bg-zinc-950  items-center justify-between px-28 text-zinc-200 fixed z-20 top-0
-          md:flex
+          lg:flex
         `
       }>
         <Image src={logo} alt="logo" className="w-32"/>
