@@ -66,9 +66,18 @@ export default function Home() {
           <Card />
       </div>
 
-      <div className="min-h-[35rem] pl-16 flex justify-center items-center bg-black text-white" id="formations">
-        <div className="flex flex-col w-[50%]">
-          <div className="flex flex-col gap-4 h-auto bg-slate-950 opacity-70 p-6">
+      <div className={`
+        h-auto flex justify-center items-center bg-black text-white
+        max-lg:flex-col-reverse lg:pl-16
+      `} id="formations">
+        <div className={`
+          flex flex-col w-full
+          lg:w-[50%]
+        `}>
+          <div className={`
+            flex flex-col w-full gap-4 h-auto bg-slate-950 opacity-70 p-6
+            
+          `}>
             <h1 className="text-lg">Formação</h1>
             <AccordionExpandDefault />
           </div>

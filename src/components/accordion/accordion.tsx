@@ -15,7 +15,7 @@ export default function AccordionExpandDefault() {
     return (
         <>
             {listTFormations.map(data => (
-                <Accordion key={data.id} defaultExpanded>
+                <Accordion key={data.id}>
                     <AccordionSummary
                         expandIcon={<ExpandMoreIcon />}
                         aria-controls="panel1-content"
