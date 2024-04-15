@@ -6,10 +6,21 @@ import Link from 'next/link';
 export function Footer () {
     return(
         <>
-            <div className='flex w-full h-44 bg-zinc-950 text-white justify-evenly items-center pl-44'>
-                <Image className='w-44' src={logo} alt='Logotipo' />
+            <div className={`
+                relative flex w-full h-auto py-20 bg-zinc-950 text-white justify-center items-center
+                max-lg:flex-col max-lg:h-full
+            `}>
+                <div className={`
+                    bottom-16 left-0 flex items-center justify-center w-[50%] h-full
+                    max-lg:absolute
+                `}>
+                    <Image className={`
+                        w-36
+                        lg:w-44
+                    `} src={logo} alt='Logotipo' />
+                </div>
                 <div className=' flex flex-col items-center justify-center w-[50%] h-full'>
-                    <div className='flex flex-col items-center justify-center h-auto w-full border-l-2 '>
+                    <div className='flex flex-col items-center justify-center h-auto w-full border-l-2 pl-2' id='div__links__footer'>
                         <ul>
                             <li>
                                 <Link href="mailto:claudiojasoares.dev@gmail.com" target='_blank'>claudiojasoares.dev@gmail.com</Link>
