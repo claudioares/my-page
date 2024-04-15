@@ -6,20 +6,27 @@ export default function Aboutme () {
     return(
         <>
             <div className="flex flex-col gap-10 h-screen pb-10 bg-gray-950 overflow-auto">
-                <header className="relative flex flex-col gap-6 w-full h-80 bg-sky-900 text-white px-56 py-10">
-                    <h1 className="text-5xl">Sobre mim...</h1>
+                <header className={`
+                    relative flex flex-col gap-6 w-full h-80 bg-sky-900 text-white px-8 py-4
+                    md:px-56 md:py-10
+                `}>
+                    <h1 className={`
+                        text-3xl
+                        md:text-5xl
+                    `}>Sobre mim...</h1>
                     <div>___________</div>
                     <p className="font-extralight text-base italic">&lsquo; Com exceção de mudar o outro, tudo é possível! &lsquo;</p>
                 </header>
                 <div className={`
-                    flex h-auto items-center justify-center px-56 gap-10
+                    flex h-auto items-center justify-center px-8 gap-4
                     max-lg:flex-col
+                    md:px-56 md:gap-10
                 `}>
 
                     <Image src={imgMe} alt="Imagem cláudio soares" 
                         className={`
                             w-80 h-96 shadow-white shadow-md
-                            md:w-auto md:h-auto
+                            md:w-50 md:h-66
                         `}
                     />
                     <div className="text-white">
@@ -44,7 +51,11 @@ export default function Aboutme () {
                     </div>
 
                 </div>
-                <div className="flex h-auto items-center justify-center px-56 gap-10">
+                <div className={`
+                    flex h-auto items-center justify-center px-8 gap-4
+                    max-lg:flex-col
+                    md:px-56 md:gap-10
+                `}>
                   
                     <div className="text-white">
                         <p>
@@ -68,7 +79,11 @@ export default function Aboutme () {
 
                 </div>
 
-                <div className="flex h-auto items-center justify-center px-56 gap-10">
+                <div className={`
+                    flex h-auto items-center justify-center px-8 gap-4 
+                    max-lg:flex-col
+                    md:px-56 md:gap-10
+                `}>
                 
                     <div className="text-white">
                         <p>
@@ -99,7 +114,11 @@ export default function Aboutme () {
                     /> */}
                 </div>
 
-                <div className="flex h-auto items-center justify-center px-56 gap-10">
+                <div className={`
+                    flex h-auto items-center justify-center px-8 gap-4 
+                    max-lg:flex-col
+                    md:px-56 md:gap-10
+                `}>
                   
                     <div className="text-white">
                         <p>
