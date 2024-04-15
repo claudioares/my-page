@@ -79,14 +79,17 @@ export function InputsForms () {
 
   return(
     <>
-       <form className="w-[70%] h-auto flex flex-col gap-4 px-6 py-9">
+       <form className={`
+          w-full h-auto flex flex-col gap-4 py-9 px-6
+          lg:w-[70%]
+       `}>
             <div className="flex flex-col gap-2">
               <div className="flex gap-44">
                 <label htmlFor="name">Seu nome</label>
                 {nameErro && <p className="text-red-500">Por favor, digite um nome para contato.</p>}
               </div>
               <input 
-                  className="h-11 rounded-xl pl-4 text-black" 
+                  className="h-11 rounded-xl pl-4 text-black w-auto" 
                   type="text" 
                   id="name" 
                   value={name}
