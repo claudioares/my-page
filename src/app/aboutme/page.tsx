@@ -11,12 +11,18 @@ export default function Aboutme () {
                     <div>___________</div>
                     <p className="font-extralight text-base italic">&lsquo; Com exceção de mudar o outro, tudo é possível! &lsquo;</p>
                 </header>
-                <div className="flex h-auto items-center justify-center px-56 gap-10">
+                <div className={`
+                    flex h-auto items-center justify-center px-56 gap-10
+                    max-lg:flex-col
+                `}>
 
                     <Image src={imgMe} alt="Imagem cláudio soares" 
-                        className="w-80 h-96 shadow-white shadow-md"
+                        className={`
+                            w-80 h-96 shadow-white shadow-md
+                            md:w-auto md:h-auto
+                        `}
                     />
-                    <div className="p-4 text-white">
+                    <div className="text-white">
                         <h1 className="font-medium text-lg">E aí meu nome é Cláudio, tudo bem?</h1>
                         <br />
                         <p>
