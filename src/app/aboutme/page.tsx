@@ -18,15 +18,16 @@ export default function Aboutme () {
                     <p className="font-extralight text-base italic">&lsquo; Com exceção de mudar o outro, tudo é possível! &lsquo;</p>
                 </header>
                 <div className={`
-                    flex h-auto items-center justify-center px-8 gap-4
+                    flex h-auto items-center justify-center px-12 gap-4 text-center
                     max-lg:flex-col
-                    md:px-56 md:gap-10
+                    lg:px-56 lg:gap-10 lg:text-left
+                    max-md:text-left
                 `}>
 
                     <Image src={imgMe} alt="Imagem cláudio soares" 
                         className={`
                             w-80 h-96 shadow-white shadow-md
-                            md:w-50 md:h-66
+                            lg:w-50 lg:h-66
                         `}
                     />
                     <div className="text-white">
@@ -52,9 +53,10 @@ export default function Aboutme () {
 
                 </div>
                 <div className={`
-                    flex h-auto items-center justify-center px-8 gap-4
+                    flex h-auto items-center justify-center px-12 gap-4 text-center
                     max-lg:flex-col
-                    md:px-56 md:gap-10
+                    lg:px-56 lg:gap-10 lg:text-left
+                    max-md:text-left
                 `}>
                   
                     <div className="text-white">
@@ -80,9 +82,10 @@ export default function Aboutme () {
                 </div>
 
                 <div className={`
-                    flex h-auto items-center justify-center px-8 gap-4 
+                    flex h-auto items-center justify-center px-12 gap-4 text-center
                     max-lg:flex-col
-                    md:px-56 md:gap-10
+                    lg:px-56 lg:gap-10 lg:text-left
+                    max-md:text-left
                 `}>
                 
                     <div className="text-white">
@@ -115,9 +118,10 @@ export default function Aboutme () {
                 </div>
 
                 <div className={`
-                    flex h-auto items-center justify-center px-8 gap-4 
+                    flex h-auto items-center justify-center px-12 gap-4 text-center
                     max-lg:flex-col
-                    md:px-56 md:gap-10
+                    lg:px-56 lg:gap-10 lg:text-left
+                    max-md:text-left
                 `}>
                   
                     <div className="text-white">
