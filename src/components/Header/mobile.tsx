@@ -18,7 +18,7 @@ export function MobileVersion () {
     return(
         <>
             <header className={`
-                w-full h-16 bg-zinc-950 text-white flex items-center justify-between px-16 z-20
+                w-full h-16 bg-zinc-950 text-white flex items-center justify-between px-16 fixed z-20 top-0
                 lg:hidden
             `}>
                 <button
@@ -32,7 +32,7 @@ export function MobileVersion () {
                 {/* modal de menu mobile */}
                 {modalMenu && 
                 <section className={`
-                    fixed flex flex-col-reverse gap-8 items-center justify-center bg-zinc-950 bg-opacity-80 bottom-0 w-full h-screen right-0
+                    fixed flex flex-col-reverse gap-8 items-center justify-center bg-zinc-950 bg-opacity-95 bottom-0 w-full h-screen right-0 z-20
                     transition-all duration-1000
                     lg:hidden
                 `}>

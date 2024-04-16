@@ -4,8 +4,11 @@ import { CardGame } from "@/components/card/cardGames";
 export default function Games () {
     return(
         <>
-            <div className="w-full h-auto pb-16 pt-24 text-white bg-black">    
-                <MyHeader />
+            <MyHeader />
+            <div className={`
+                w-full h-screen pb-16 pt-24 px-4 text-white bg-black
+                lg:pt-24 md:px-0
+            `}>    
                 <h1 className="text-center mb-10">
                     Alguns projetinhos de jogos que desenvolvi ao longo desses 
                     anos de apredizado. <br></br>

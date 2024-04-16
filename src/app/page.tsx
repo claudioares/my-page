@@ -29,7 +29,10 @@ export default function Home() {
       md:gap-4
     `}>
       <MyHeader />
-      <div className="h-lvh lg:h-[40rem] max-w-full text-[#D9D9D9] bg-[url('../../public/bg.jpg')] bg-cover p-16 relative">
+      <div className={`
+        h-lvh max-w-full text-[#D9D9D9] bg-[url('../../public/bg.jpg')] bg-cover p-16 relative
+        lg:h-[40rem]
+      `}>
         <div className="flex bg-black opacity-95 w-full h-full absolute top-0 left-0 right-2">
           <div className={`
             flex flex-col items-start justify-center w-full h-full p-12 gap-4
