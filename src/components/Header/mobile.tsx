@@ -56,11 +56,11 @@ export function MobileVersion () {
                         <li><Link href='/games' className="hover:text-pink-700 hover:underline">Jogos</Link></li>
                         }
 
-                        {pathname === '/blog' || pathname === `/blog/${pathname.split('/')[2]}`?
+                        {/* {pathname === '/blog' || pathname === `/blog/${pathname.split('/')[2]}`?
                         <li><Link href='/blog' className="text-pink-700 underline">Blog</Link></li>
                         :
                         <li><Link href='/blog' className="hover:text-pink-700 hover:underline">Blog</Link></li>
-                        }
+                        } */}
                     </ul>
 
                     <div className="w-auto flex flex-col gap-8">
