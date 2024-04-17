@@ -15,6 +15,12 @@ export default function Games () {
                     Achei legal colocar aqui. &#128522; &#128522; 
                 </h1>
                 <CardGame />
+                <br />
+                <h1 className="text-center mb-10">
+                    Obs: Os jogos estão, ainda, apenas em formato
+                    Decktop. <br></br>
+                    Em breve novos jogos e para vários dispositivos. &#128522; &#128522; 
+                </h1>
             </div>
         </>
     )
