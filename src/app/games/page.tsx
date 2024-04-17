@@ -6,7 +6,7 @@ export default function Games () {
         <>
             <MyHeader />
             <div className={`
-                w-full h-screen pb-16 pt-24 px-4 text-white bg-black
+                w-full min-h-screen pb-16 pt-24 px-4 text-white bg-black
                 lg:pt-24 md:px-0
             `}>    
                 <h1 className="text-center mb-10">
