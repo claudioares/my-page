@@ -11,6 +11,10 @@ import pj05 from '../../../src/assets/img_apps/pro5.png';
 import pj06 from '../../../src/assets/img_apps/pro6.png';
 
 import ImageNext from "next/image";
+import { useContext, useState } from 'react';
+import { PageUnderConstruction } from '../modal.page.under.construction/madal.page.under.contruction';
+import { ContextApi } from '../contextApi/contextApi';
+
 
 
 const images = [
@@ -47,7 +51,7 @@ const images = [
     url: pj05,
     title: 'Projeto 05',
     width: '33.3%',
-    link:""
+    link:'#05'
   },
   {
     id: '06',
@@ -101,9 +105,29 @@ const ImageMarked = styled('span')(({ theme }) => ({
   transition: theme.transitions.create('opacity'),
 }));
 
+
 export function Card() {
+
+  const {
+    errorPageConstruction, setErroPageConstruction
+  } = useContext(ContextApi);
+  const [blank, setBlank] = useState<string>('_blank')
+
+  function handlePageErroConstruction (id:string) {
+    
+    
+    id === '05' && setBlank('');
+    id === '05' && setErroPageConstruction(true);
+
+    setTimeout(()=>{
+      setBlank('_blank');
+      setErroPageConstruction(false);
+    }, 4000)
+  }
+  
   return (
-    <section className='flex items-center justify-center w-full h-auto p-2'>
+    <section className='flex items-center justify-center w-full h-auto p-2' id='05'>
+      {errorPageConstruction && <PageUnderConstruction />}
       <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center',  flexWrap: 'wrap', minWidth: 300, width: '100%' }} id="projects">
         <div className={`
           flex flex-wrap items-center justify-center w-full gap-2 
@@ -119,20 +143,20 @@ export function Card() {
             >
               <ImageNext fill={true} src={image.url} alt='Imagem do projeto' />
               <ImageBackdrop className="MuiImageBackdrop-root" />
-              <div>
-                <a href={image.link} target='_blank'>
-                <Typography
-                    component="span"
-                    variant="subtitle1"
-                    color="inherit"
-                    sx={{
-                      position: 'relative',
-                      p: 4,
-                      pt: 2,
-                      pb: (theme) => `calc(${theme.spacing(1)} + 6px)`,
-                    }}
-                  >
-                    {image.title}
+              <div onClick={()=>handlePageErroConstruction(image.id)}>
+                <a href={image.link} target={blank}>
+                  <Typography
+                      component="span"
+                      variant="subtitle1"
+                      color="inherit"
+                      sx={{
+                        position: 'relative',
+                        p: 4,
+                        pt: 2,
+                        pb: (theme) => `calc(${theme.spacing(1)} + 6px)`,
+                      }}
+                    >
+                      {image.title}
                     <ImageMarked className="MuiImageMarked-root" />
                   </Typography>
                 </a>

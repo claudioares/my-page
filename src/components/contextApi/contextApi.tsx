@@ -26,12 +26,16 @@ export default function ContextProvider ({children}: {children: ReactNode}) {
     const [modalContactSucess, setModalContactSucess] = useState<Boolean>(false);
     const [modalContactError, setModalContactError] = useState<Boolean>(false);
 
+    // modal erro under contruction
+    const [errorPageConstruction, setErroPageConstruction]  = useState<boolean>(false);
+
 
     return(
         <ContextApi.Provider value={{
             selectIcon, setSelectIcon, handleHiperlinkTo,
             modalContactSucess, setModalContactSucess,
-            modalContactError, setModalContactError
+            modalContactError, setModalContactError,
+            errorPageConstruction, setErroPageConstruction
         }}>
             {children}
         </ContextApi.Provider>
