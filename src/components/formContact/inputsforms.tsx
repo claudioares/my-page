@@ -43,6 +43,13 @@ export function InputsForms () {
 
     const API_MESSEGE_URL:string = "https://my-page-api-contacts.onrender.com/messegeclient" as string;
 
+    setTimeout(()=>{
+      setName("");
+      setEmail("");
+      setMessege("");
+      setLoadingButton(false);
+    }, 3000)
+
     try {
       const response = await fetch(API_MESSEGE_URL || "https://my-page-api-contacts.onrender.com/messegeclient" , {
         method: 'POST',
@@ -51,7 +58,6 @@ export function InputsForms () {
           'content-type': 'application/json'
         }
       });
-  
   
       if(response.status === 201) {
         setModalContactSucess(true);
