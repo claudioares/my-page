@@ -9,12 +9,6 @@ export function FormContact () {
                 flex flex-col justify-center items-center h-auto w-full my-4 bg-black text-white
                 lg:min-h-[40rem] lg:my-0
             `} id="contact">
-                <p className={`
-                    w-full h-auto flex items-center justify-center p-4 text-xl font-semibold
-                    lg:hidden
-                `}>
-                    Contate-me
-                </p>
                 <div className={`
                     flex justify-center items-center w-full h-[30rem]  
                     lg:w-[80%] md:rounded-xl lg:bg-slate-950 lg:border
@@ -27,10 +21,12 @@ export function FormContact () {
                             <Image className="w-40" src={logo} alt="Logotipo" />
                         </div>
                         <div>
-                        <h1 className={`
-                            text-lg font-medium w-full text-center
-                            lg:text-3xl lg:font-semibold
-                        `}>Contate-me</h1>
+                            <h1 className={`
+                                text-lg font-medium w-full text-center
+                                lg:text-base lg:font-light
+                            `}>
+                                Deixe seu contato e sua mensagem e entrarei em contato o mais rápido possível
+                            </h1>
                         </div>
                     </div>
                     <InputsForms />
