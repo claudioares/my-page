@@ -21,12 +21,12 @@ export function Footer () {
                 </div>
                 <div className=' flex flex-col items-center justify-center w-[50%] h-full'>
                     <div className='flex flex-col items-center justify-center h-auto w-full border-l-2 pl-2' id='div__links__footer'>
-                        <ul>
+                        <ul className='h-auto flex flex-col gap-3'>
                             <li>
                                 <Link href="mailto:claudiojasoares.dev@gmail.com" target='_blank'>claudiojasoares.dev@gmail.com</Link>
                             </li>
                             <li>
-                                <Link href="mailto:jas.code@yahoo.com" target='_blank'>jas.code@yahoo.com</Link>
+                                <Link href="mailto:jas.code@yahoo.com" target='_blank'>claudiojasoares.dev@outlook.com</Link>
                             </li>
                         </ul>
                     </div>

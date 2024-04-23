@@ -43,12 +43,9 @@ export function InputsForms () {
 
     const API_MESSEGE_URL:string = "https://my-page-api-contacts.onrender.com/messegeclient" as string;
 
-    setTimeout(()=>{
-      setName("");
-      setEmail("");
-      setMessege("");
-      setLoadingButton(false);
-    }, 3000)
+    setName("");
+    setEmail("");
+    setMessege("");
 
     try {
       const response = await fetch(API_MESSEGE_URL || "https://my-page-api-contacts.onrender.com/messegeclient" , {
@@ -60,14 +57,24 @@ export function InputsForms () {
       });
   
       if(response.status === 201) {
+        
+        await fetch("https://sendmail-api-x9o2.onrender.com/sendmail", {
+
+          method: 'POST',
+          body: JSON.stringify({
+            name:data.input_name,
+            email:data.input_email
+          }),
+          headers: {
+            'content-type': 'application/json'
+          }
+        });
+
+        setLoadingButton(false);
         setModalContactSucess(true);
         setTimeout(()=>{
           setModalContactSucess(false);
-        }, 2000)
-        setName("");
-        setEmail("");
-        setMessege("");
-        setLoadingButton(false);
+        }, 4000);
       }
     } catch (error) {
       console.log("Error during transaction. ", error)
