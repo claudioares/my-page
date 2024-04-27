@@ -37,6 +37,11 @@ Se quiser entrar em contato comigo, você pode preencher o formulário do meu po
 
 ---
 
+# BackEnd
+### Arquitetura
+
+![Captura de Tela (6)](https://github.com/claudioares/my-page/assets/95495192/2fa746aa-986b-4209-b582-ddb25d180e06)
+
 # my-page-API-contacts - API de Contatos
 
 Esta é a API de Contatos que criei para armazenar mensagens de usuários da minha página pessoal. A API utiliza tecnologias como Prisma, MongoDB, Node.js, TypeScript, Fastify, Zod e Nodemailer.
@@ -82,10 +87,34 @@ Exemplo de corpo da requisição:
 #### GET /api/messageclient/:id
 ````Rota utilizada para obter uma mensagem específica de cliente com base no ID fornecido.````
 
+#### DELETE //deletemessege/:id
+````Rota utilizada para obter uma mensagem específica de cliente com base no ID fornecido.````
+
 ### Contribuindo
 Se você deseja contribuir com melhorias ou correções para esta API, sinta-se à vontade para abrir uma issue ou enviar um pull request.
 ##### Nota: Esta API foi desenvolvida para uso pessoal na minha página e pode ser adaptada para outros projetos.
 
+# Documentação da API para Envio Automático de E-mails - sendmail-api
+
+Esta API permite enviar e-mails automaticamente em resposta a uma solicitação recebida em uma rota específica. A aplicação utiliza o Nodemailer para enviar e-mails.
+
+## Endpoint
+
+`POST /sendmail`
+
+Envia um e-mail em resposta à solicitação recebida.
+
+Esta API permite enviar e-mails automaticamente em resposta a uma solicitação recebida em uma rota específica. A aplicação utiliza o Nodemailer para enviar e-mails.
+
+### Requisição
+````
+Método: POST
+Corpo da Requisição (JSON):
+
+{
+  "email": "exemplo@email.com",
+}
+````
 
 
 
