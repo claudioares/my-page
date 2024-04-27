@@ -40,7 +40,7 @@ Se quiser entrar em contato comigo, você pode preencher o formulário do meu po
 # BackEnd
 ### Arquitetura
 
-![Captura de Tela (6)](https://github.com/claudioares/my-page/assets/95495192/2fa746aa-986b-4209-b582-ddb25d180e06)
+![Portifolio page](https://github.com/claudioares/my-page/assets/95495192/3c84d58e-0d2d-4d03-944c-67fcfbd3f0bf)
 
 # my-page-API-contacts - API de Contatos
 https://github.com/claudioares/my-page-api-contacts.git
