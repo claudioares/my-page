@@ -3,8 +3,8 @@ import { html_email } from "../htmlTemplateEmail/email_html_tenplate";
 
 
 const transport = nodemailer.createTransport({
-    host: 'sandbox.smtp.mailtrap.io',
-    port:  2525,
+    host: process.env.HOSTMAIL,
+    port: process.env.PORTMAIL,
     // secure: false,
     auth: {
         user: process.env.MAIL_USER,
