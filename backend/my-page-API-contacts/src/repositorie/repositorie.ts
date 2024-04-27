@@ -31,5 +31,17 @@ export class RepositorieMesseges implements IMethodsOfMesseges {
 
 
         return resultDataBase;
+    };
+    async delMessegeId(id: string): Promise<any> {
+        const resultDataBase = await prisma.connectionClients.deleteMany({
+            where:{
+                id
+            }
+        })
+
+        if(resultDataBase.count === 1) {
+            return "Delete success!!"
+        }
+        return resultDataBase;
     }
 }

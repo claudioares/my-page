@@ -12,4 +12,5 @@ export interface IMethodsOfMesseges {
     create(data:IMessegeClient):Promise<IMessegeClient>
     getMesseges():Promise<IMessegeClient | null>
     getMessegeId(id:string):Promise<IMessegeClient | null>
+    delMessegeId(id:string):Promise<string>
 }

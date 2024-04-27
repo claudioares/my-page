@@ -46,5 +46,13 @@ export class UsecaseMessegeClient {
 
         return resultRepositorie;
 
+    };
+
+    async delMessege (id:string) {
+        if(!id){return "Incomplete parameters!"};
+
+        const resultRepositorie = await this.repositorie.delMessegeId(id);
+
+        return resultRepositorie;
     }
 }
