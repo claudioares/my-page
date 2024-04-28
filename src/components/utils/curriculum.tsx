@@ -77,6 +77,33 @@ const listInfoProjects : IListInfoProjectsType[] = [
             `
         }
     },
+    {
+        id: '03',
+        name: 'Palco on line',
+        team: `
+        Projeto pessoal que desenvolvo voltado para área musical
+        .
+        `,
+        description: `
+        Aplicação desenvolvida em astro e será migrado pra next 14.
+        A aplicação visa ajudar na divulgação e monetização dos artistas que participarem
+        da plataforma. A ideia é manter videos gravados ao vivo ou em estudio e apresentações
+        ao vivo onde o publico passam coleborar com os artistas.
+        `,
+        obs: `
+            Conheça o projeto em andamento na minha plataforma
+            de portifolio, na seção de Projetos
+        `,
+        conclusion: {
+            conclusion: `
+            O projeto em fase de desenvolvimento.
+            O deploy foi feito apenas para apresentação do conceito da ideia.
+            `,
+            experience: `
+            Principal conhecimento adquirido: Desenvolvimento Web fullstack.
+            `
+        }
+    },
 ];
 
 export default listInfoProjects;
