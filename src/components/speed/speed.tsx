@@ -5,8 +5,8 @@ import SpeedDialIcon from '@mui/material/SpeedDialIcon';
 import SpeedDialAction from '@mui/material/SpeedDialAction';
 import FileCopyIcon from '@mui/icons-material/FileCopyOutlined';
 import SaveIcon from '@mui/icons-material/Save';
-import PrintIcon from '@mui/icons-material/Print';
-import { useContext, useEffect } from 'react';
+
+import { useContext } from 'react';
 import { ContextApi } from '../contextApi/contextApi';
 
 const actions = [

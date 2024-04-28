@@ -1,5 +1,4 @@
 "use client"
-import { StaticImageData } from "next/image";
 import { ReactNode, createContext, useState } from "react";
 
 
