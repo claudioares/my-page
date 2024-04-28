@@ -42,7 +42,7 @@ const listTFormations = [
     {
         id: '04',
         entitie: 'Cruzeiro do Sul/UNICID',
-        description: `Graduação em Inteligencia Artificial, estou no segundo periodo e estou estudando 
+        description: `Graduando em Inteligencia Artificial, estou no segundo periodo e estou estudando 
         ciencias de analise de dados, arvore de desisão, listas, pilhas e conteúdos relacionados a manipulação
         dados`,
         stacks: {
