@@ -4,7 +4,6 @@ import logo from '../../../public/logo.svg';
 import Link from 'next/link';
 import { usePathname } from "next/navigation";
 import { MobileVersion } from "./mobile";
-import { SocialMidia } from "../socialRedes/socialMidia";
 
 
 
@@ -14,7 +13,7 @@ export function MyHeader() {
 
   return (
     <>
-      <header className={
+      <header id="header" className={
         `
           hidden w-full h-20 bg-zinc-950 bg-opacity-40 items-center justify-between px-28 text-zinc-200 fixed z-20 top-0
           lg:flex

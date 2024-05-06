@@ -129,3 +129,32 @@
     border: none;
   }
 }
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+#arrowIconDown{
+  animation: go__back 2s linear infinite, clear 2s linear infinite;
+}
+
+@keyframes go__back {
+  0% {
+    transform: translateY(0); /* Começa no topo */
+  }
+  100% {
+    transform: translateY(80px); /* Cai para fora da tela */
+  }
+}
+
+@keyframes clear {
+  0% {
+    opacity: 0; /* Opacidade total */
+  }
+  50%{
+    opacity: 1;
+  }
+  100% {
+    opacity: 0; /* Opacidade zero (desaparece) */
+  }
+}

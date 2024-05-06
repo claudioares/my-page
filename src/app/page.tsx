@@ -13,6 +13,7 @@ import { ContextApi } from "@/components/contextApi/contextApi";
 import { ModalErrorMessege } from "@/components/modal_error_messege/modal_error_messege";
 import { Footer } from "@/components/footer/footer";
 import { MyHeader } from "@/components/Header/header";
+import { ChevronDown } from "lucide-react";
 
 export default function Home() {
 
@@ -22,7 +23,7 @@ export default function Home() {
 
   return (
     <div className={`
-      flex flex-col
+      flex flex-col scroll-[none]
     `}>
       <MyHeader />
       <div className={`
@@ -37,21 +38,31 @@ export default function Home() {
           <div className={`
             flex flex-col items-center justify-center w-full h-full p-12 gap-4
           `}>
-            <div className="text-center">
-              <h1 className="text-4xl font-semibold">Cláudio J. A. Soares</h1>
-              <h3 className="text-xl">Desenvolvedor FullStack</h3>
+            <div className="flex flex-col gap-3 text-center">
+              <h1 className={`
+                text-3xl font-semibold
+                lg:text-5xl
+              `}>Cláudio J. A. Soares</h1>
+              <h3 className={`
+                text-xl
+              `}>Desenvolvedor FullStack</h3>
             </div>
-           <p className="w-[65%] text-center"> 
+           <p className={`
+              w-[65%] text-center text-lg
+              lg:text-xl
+           `}> 
               Desenvolvedor fullstack com 2 anos de experiência, 
               habilidades em trabalho colaborativo e projetos individuais. 
               Familiarizado com metodologias ágeis, destacando-se por entregas 
               eficientes e projetos bem-sucedidos como freelancer.
            </p>
-           <div className="flex gap-4 w-auto px-1">
+           <div className="flex gap-4 w-auto px-1 mt-12">
              <BtnHyperLink btnTo="projects" href="" />
              <BtnHyperLink btnTo="Saiba mais ..." href="/aboutme"/>
            </div>
           </div>
+
+          <ChevronDown className="w-20 h-20 cursor-pointer" id="arrowIconDown"/>
         </div>
       </div>
 
