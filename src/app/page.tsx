@@ -30,8 +30,8 @@ export default function Home() {
     `}>
       <MyHeader />
       <div className={`
-        h-lvh max-w-full text-[#D9D9D9] bg-[url('../../public/bg.jpg')] bg-cover p-16 relative
-        lg:h-[40rem]
+        h-lvh max-w-full text-[#D9D9D9] bg-[url('../../public/bg.png')] bg-fixed bg-center bg-cover p-16 relative
+        lg:h-[40rem] lg:bg-contain
       `}>
         <div className="flex bg-black opacity-95 w-full h-full absolute top-0 left-0 right-2">
           <div className={`
@@ -69,27 +69,31 @@ export default function Home() {
           <Card />
       </div>
 
-      <div className={`
-        h-auto flex justify-center items-center bg-black text-white
-        max-lg:flex-col-reverse lg:pl-16
-      `} id="formations">
-        <div className={`
-          flex flex-col w-full
-          lg:w-[50%]
-        `}>
+      <div className="bg-[url('../../public/bg-sec-formation.jpg')] bg-fixed bg-center bg-cover bg-no-repeat">
+        <div className="bg-black bg-opacity-90">
           <div className={`
-            flex flex-col w-full gap-4 h-auto bg-slate-950 opacity-70 p-6
-            
-          `}>
-            <h1 className="text-lg">Formação</h1>
-            <AccordionExpandDefault />
+            h-auto flex justify-center items-center text-white
+            max-lg:flex-col-reverse lg:pl-16
+          `} id="formations">
+            <div className={`
+              flex flex-col w-full
+              lg:w-[50%]
+            `}>
+              <div className={`
+                flex flex-col w-full gap-4 h-auto bg-slate-950 bg-opacity-70 p-6
+                
+              `}>
+                <h1 className="text-lg">Formação</h1>
+                <AccordionExpandDefault />
+              </div>
+            </div>
+            <div className="w-[50%] flex items-center justify-end pr-6">
+              <Image className="w-[25rem] pb-8" src={imgAcordion} alt="imagem de decoração" />
+            </div>
           </div>
-        </div>
-        <div className="w-[50%] flex items-center justify-end pr-6">
-          <Image className="w-[25rem] pb-8" src={imgAcordion} alt="imagem de decoração" />
+          <FormContact />
         </div>
       </div>
-      <FormContact />
       <BasicSpeedDial />
       <Modal />
       {modalContactSucess && <ModalSucessMessege />}

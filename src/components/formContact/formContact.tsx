@@ -6,7 +6,7 @@ export function FormContact () {
     return(
         <>
             <div className={`
-                flex flex-col justify-center items-center h-auto w-full my-4 bg-black text-white
+                flex flex-col justify-center items-center h-auto w-full my-4 text-white
                 lg:min-h-[40rem] lg:my-0
             `} id="contact">
                 <div className={`
