@@ -18,7 +18,7 @@ export function MobileVersion () {
     return(
         <>
             <header className={`
-                w-full h-16 bg-zinc-950 text-white flex items-center justify-between px-16 fixed z-20 top-0
+                w-full h-16 bg-zinc-950 text-white flex items-center justify-between px-16 fixed z-50 top-0
                 lg:hidden
             `}>
                 <button

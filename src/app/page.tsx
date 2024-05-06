@@ -1,14 +1,11 @@
 "use client"
-import { Separator } from "@/components/ui/separator";
 import { Card } from "@/components/card/card";
 import BasicSpeedDial from "@/components/speed/speed";
 import { Modal } from "@/components/modal/modal";
 import AccordionExpandDefault from "@/components/accordion/accordion";
 import Image from "next/image";
-import imgHead from '../../public/imagensDecorations/image (4).png'
 import imgAcordion from '../../public/imagensDecorations/image (9).png'
-import { BtnFreelancer } from "@/components/btnFreelancer/btnFreelancer";
-import { FormContact } from "@/components/formContact/formContact";
+import { BtnContact } from "@/components/btnContact/btnContact";
 import { BtnHyperLink } from "@/components/btnHyperLink/btnHyperlink";
 import { ModalSucessMessege } from "@/components/modal_sucess_messege/modal_sucess_messege";
 import { useContext } from "react";
@@ -25,47 +22,40 @@ export default function Home() {
 
   return (
     <div className={`
-      flex flex-col bg-black
-      md:gap-4
+      flex flex-col
     `}>
       <MyHeader />
       <div className={`
-        h-lvh max-w-full text-[#D9D9D9] bg-[url('../../public/bg.png')] bg-fixed bg-center bg-cover p-16 relative
-        lg:h-[40rem] lg:bg-contain
+        h-lvh max-w-full text-[#D9D9D9] bg-[url('../../public/bg.png')] bg-fixed bg-center bg-cover relative
+        lg:h-screen lg:bg-no-repeat
       `}>
-        <div className="flex bg-black opacity-95 w-full h-full absolute top-0 left-0 right-2">
+        <div className="flex flex-col px-16 py-28 justify-center items-center bg-black bg-opacity-95 w-full h-full">
+          <div className="flex justify-end w-full h-auto px-8">
+            <BtnContact />
+          </div>
+
           <div className={`
-            flex flex-col items-start justify-center w-full h-full p-12 gap-4
-            md:w-[50%]
+            flex flex-col items-center justify-center w-full h-full p-12 gap-4
           `}>
-            <BtnFreelancer />
-            <div>
+            <div className="text-center">
               <h1 className="text-4xl font-semibold">Cláudio J. A. Soares</h1>
               <h3 className="text-xl">Desenvolvedor FullStack</h3>
             </div>
-           <p> 
+           <p className="w-[65%] text-center"> 
               Desenvolvedor fullstack com 2 anos de experiência, 
               habilidades em trabalho colaborativo e projetos individuais. 
               Familiarizado com metodologias ágeis, destacando-se por entregas 
               eficientes e projetos bem-sucedidos como freelancer.
            </p>
-           <Separator className="my-2 border-slate-300" />
            <div className="flex gap-4 w-auto px-1">
              <BtnHyperLink btnTo="projects" href="" />
              <BtnHyperLink btnTo="Saiba mais ..." href="/aboutme"/>
            </div>
           </div>
-
-          <div className={`
-            hidden items-center justify-center w-[50%] h-full
-            md:flex
-          `}>
-            <Image className="w-[25rem] duration-1000" src={imgHead} alt="imagen de decotação" />
-          </div>
         </div>
       </div>
 
-      <div className="flex flex-col items-center justify-center h-auto py-2 bg-pink-950 text-white" id="projects">
+      <div className="flex flex-col items-center justify-center h-auto bg-pink-950 text-white" id="projects">
           <Card />
       </div>
 
@@ -91,13 +81,12 @@ export default function Home() {
               <Image className="w-[25rem] pb-8" src={imgAcordion} alt="imagem de decoração" />
             </div>
           </div>
-          <FormContact />
         </div>
       </div>
       <BasicSpeedDial />
       <Modal />
       {modalContactSucess && <ModalSucessMessege />}
-      {modalContactError && <ModalErrorMessege />}
+      {modalContactError && <ModalErrorMessege messege="Erro inesperado. Mensagem não foi enviada. Tente mais tarde!" />}
 
       <Footer />
     </div>
