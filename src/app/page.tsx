@@ -14,6 +14,8 @@ import { ModalErrorMessege } from "@/components/modal_error_messege/modal_error_
 import { Footer } from "@/components/footer/footer";
 import { MyHeader } from "@/components/Header/header";
 import { ChevronDown } from "lucide-react";
+import { DrawerComponent } from "@/components/drawer/drawer";
+import { ButtonHobby } from "@/components/buttonHobbys/button.hobby";
 
 export default function Home() {
 
@@ -70,23 +72,21 @@ export default function Home() {
           <Card />
       </div>
 
-      <div className="bg-[url('../../public/bg-sec-formation.jpg')] bg-fixed bg-center bg-cover bg-no-repeat">
-        <div className="bg-black bg-opacity-90">
+      <div className="bg-[url('../../public/bg-sec-03.png')] bg-fixed bg-center bg-cover bg-no-repeat">
+        <div className="bg-black bg-opacity-90 p-4">
           <div className={`
-            h-auto flex justify-center items-center text-white
+            h-full w-full flex justify-center items-center text-white
+            bg-zinc-700 bg-opacity-20
+            p-4
             max-lg:flex-col-reverse lg:pl-16
           `} id="formations">
             <div className={`
               flex flex-col w-full
+              text-center gap-4
               lg:w-[50%]
             `}>
-              <div className={`
-                flex flex-col w-full gap-4 h-auto bg-slate-950 bg-opacity-70 p-6
-                
-              `}>
-                <h1 className="text-lg">Formação</h1>
-                <AccordionExpandDefault />
-              </div>
+              <DrawerComponent />
+              <p className="text-lg">Projetos para análise de código ou contribuição</p>
             </div>
             <div className="w-[50%] flex items-center justify-end pr-6">
               <Image className="w-[25rem] pb-8" src={imgAcordion} alt="imagem de decoração" />
@@ -94,11 +94,40 @@ export default function Home() {
           </div>
         </div>
       </div>
+      <div className="flex w-full h-auto p-2 bg-rose-950">
+         <div className={`
+            flex flex-col w-[50%] gap-4 h-auto bg-slate-950 bg-opacity-70 p-6
+          `}>
+            <h1 className="text-lg text-slate-50">Formação</h1>
+            <AccordionExpandDefault />
+          </div>
+          <div className="">
+            algum conteudo
+          </div>
+      </div>
+
+      <div className="w-full h-96 bg-[url('../../public/bg-sec-formation.jpg')] bg-fixed bg-center bg-cover bg-no-repeat">
+        <div className="w-full h-full bg-black bg-opacity-75 p-4">
+        <div className={`
+            flex h-full w-full justify-center items-center text-white
+            bg-zinc-700 bg-opacity-20
+            p-4 gap-2
+            max-lg:flex-col-reverse lg:pl-16
+          `}>
+            <div className="flex justify-end gap-2 w-full px-56">
+              <ButtonHobby nameButton="DESIGN" />
+              <ButtonHobby nameButton="TECNOLOGIAS" />
+              <ButtonHobby nameButton="FILMES" />
+              <ButtonHobby nameButton="MÚSICAS" />
+            </div>
+          </div>
+        </div>
+      </div>
+
       <BasicSpeedDial />
       <Modal />
       {modalContactSucess && <ModalSucessMessege />}
       {modalContactError && <ModalErrorMessege messege="Erro inesperado. Mensagem não foi enviada. Tente mais tarde!" />}
-
       <Footer />
     </div>
   );

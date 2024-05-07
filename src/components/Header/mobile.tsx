@@ -23,7 +23,7 @@ export function MobileVersion () {
             `}>
                 <button
                     className={`
-                    text-white bg-pink-700 w-32 h-8 rounded-lg
+                    text-white bg-rose-950 w-32 h-8 rounded-lg
                     lg:hidden
                     `}
                     onClick={()=>handleModalMenu()}
@@ -45,15 +45,15 @@ export function MobileVersion () {
 
                     <ul className="flex flex-col gap-8 items-center justify-center text-green_clean text-xl">
                         {pathname === '/' ? 
-                        <li><Link  href='/' className="text-pink-700 underline">Home</Link></li>
+                        <li><Link  href='/' className="text-rose-950 underline">Home</Link></li>
                         :
-                        <li><Link  href='/' className="hover:text-pink-700 hover:underline">Home</Link></li>
+                        <li><Link  href='/' className="hover:text-rose-900 hover:underline">Home</Link></li>
                         }
                         
                         {pathname === '/games' ? 
-                        <li><Link href='/games' className="text-pink-700 underline">Jogos</Link></li>
+                        <li><Link href='/games' className="text-rose-950 underline">Jogos</Link></li>
                         :
-                        <li><Link href='/games' className="hover:text-pink-700 hover:underline">Jogos</Link></li>
+                        <li><Link href='/games' className="hover:text-rose-900 hover:underline">Jogos</Link></li>
                         }
 
                         {/* {pathname === '/blog' || pathname === `/blog/${pathname.split('/')[2]}`?
@@ -65,17 +65,17 @@ export function MobileVersion () {
 
                     <div className="w-auto flex flex-col gap-8">
                         <Link href="mailto:uncs.claudio.aluno@gmail.com">
-                        <Button className="w-28 h-10 bg-pink-900 flex items-center justify-center text-[0.5rem] rounded-[1rem]">
+                        <Button className="w-28 h-10 bg-rose-950 flex items-center justify-center text-[0.5rem] rounded-[1rem]">
                             <EnvelopeOpenIcon className="mr-2 h-5 w-5" /> Email
                         </Button>
                         </Link>
                         <Link href="https://github.com/claudioares?tab=repositories" target="_blank">
-                        <Button className="w-28 h-10 bg-pink-900 flex items-center justify-center text-[0.5rem] rounded-[1rem]">
+                        <Button className="w-28 h-10 bg-rose-950 flex items-center justify-center text-[0.5rem] rounded-[1rem]">
                             <GitHubLogoIcon className="mr-2 h-5 w-5" /> GitHub
                         </Button>
                         </Link>
                         <Link href="https://www.linkedin.com/in/claudio-soares-dev/" target="_blank">
-                        <Button className="w-28 h-10 bg-pink-900 flex items-center justify-center text-[0.5rem] rounded-[1rem]">
+                        <Button className="w-28 h-10 bg-rose-950 flex items-center justify-center text-[0.5rem] rounded-[1rem]">
                             <LinkedInLogoIcon className="mr-2 h-5 w-5" /> Linkedin
                         </Button>
                         </Link>

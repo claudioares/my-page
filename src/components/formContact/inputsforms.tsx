@@ -93,7 +93,6 @@ export function InputsForms () {
     }
   };
 
-
   return(
     <>
        <form className={`

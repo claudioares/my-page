@@ -1,4 +1,4 @@
-import { Button } from "@/components/ui/button"
+import { Button } from "@/components/ui/button";
 import {
   Dialog,
   DialogContent,
@@ -10,14 +10,14 @@ import {
 import { InputsForms } from "../formContact/inputsforms"
   
 
-export function BtnContact() {
+export function     BtnContact() {
     return(
-        <div className="fixed z-40">
+        <div className="absolute z-40">
             <Dialog>
                 <DialogTrigger asChild>
-                    <Button variant="outline" className="bg-rose-900 border-none px-10">Fale comigo</Button>
+                    <Button variant="outline" className="bg-rose-950 hover:bg-zinc-800 hover:text-slate-200 border-none px-14">Fale comigo</Button>
                 </DialogTrigger>
-                <DialogContent className="flex items-center justify-center flex-col w-full bg-rose-900 text-slate-200">
+                <DialogContent className="flex items-center justify-center flex-col w-full bg-rose-950 text-slate-50">
                     <DialogHeader className="flex flex-col mt-8 gap-1">
                         <DialogTitle>Deixe sua mensagem</DialogTitle>
                         <DialogDescription className="text-slate-200">

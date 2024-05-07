@@ -19,7 +19,7 @@ export function BtnHyperLink ({btnTo, href}:BtnParamsType) {
             className={`
               bg-[all:unset]
               flex w-auto h-auto  px-8 py-2 gap-1 animate-btnAnimation
-              items-center justify-center text-[0.8rem] text-rose-900 rounded-[0.8rem] hover:bg-slate-900
+              items-center justify-center text-[0.8rem] text-rose-900 rounded-[0.8rem] hover:bg-[all:unset] hover:text-slate-200
               
               lg:px-10  lg:text-[1.2rem]
             `}

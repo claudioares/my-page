@@ -23,15 +23,15 @@ export function MyHeader() {
 
         <ul className="flex h-[100%] justify-around w-96 items-center text-green_clean text-lg">
           {pathname === '/' ? 
-            <li><Link  href='/' className="text-pink-700 underline">Home</Link></li>
+            <li><Link  href='/' className="text-zinc-200">Home</Link></li>
             :
-            <li><Link  href='/' className="hover:text-pink-700 hover:underline">Home</Link></li>
+            <li><Link  href='/' className="hover:text-zinc-400 hover:underline">Home</Link></li>
           }
           
           {pathname === '/games' ? 
-            <li><Link href='/games' className="text-pink-700 underline">Jogos</Link></li>
+            <li><Link href='/games' className="text-zinc-200">Jogos</Link></li>
             :
-            <li><Link href='/games' className="hover:text-pink-700 hover:underline">Jogos</Link></li>
+            <li><Link href='/games' className="hover:text-zinc-400 hover:underline">Jogos</Link></li>
           }
 
           {/* {pathname === '/blog' || pathname === `/blog/${pathname.split('/')[2]}`?
