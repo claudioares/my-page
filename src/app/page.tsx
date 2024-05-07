@@ -81,12 +81,9 @@ export default function Home() {
             max-lg:flex-col-reverse lg:pl-16
           `} id="formations">
             <div className={`
-              flex flex-col w-full
-              text-center gap-4
               lg:w-[50%]
             `}>
               <DrawerComponent />
-              <p className="text-lg">Projetos para análise de código ou contribuição</p>
             </div>
             <div className="w-[50%] flex items-center justify-end pr-6">
               <Image className="w-[25rem] pb-8" src={imgAcordion} alt="imagem de decoração" />
@@ -109,16 +106,20 @@ export default function Home() {
       <div className="w-full h-96 bg-[url('../../public/bg-sec-formation.jpg')] bg-fixed bg-center bg-cover bg-no-repeat">
         <div className="w-full h-full bg-black bg-opacity-75 p-4">
         <div className={`
-            flex h-full w-full justify-center items-center text-white
+            flex flex-col h-full w-full justify-center items-center text-white
             bg-zinc-700 bg-opacity-20
-            p-4 gap-2
+            p-4 gap-6
             max-lg:flex-col-reverse lg:pl-16
           `}>
-            <div className="flex justify-end gap-2 w-full px-56">
-              <ButtonHobby nameButton="DESIGN" />
-              <ButtonHobby nameButton="TECNOLOGIAS" />
-              <ButtonHobby nameButton="FILMES" />
-              <ButtonHobby nameButton="MÚSICAS" />
+            <h1 className="text-2xl">Hobbies</h1>
+            <div className="flex flex-wrap justify-center gap-2 w-full">
+              <ButtonHobby nameButton="DESIGNER GRÁFICO" />
+              <ButtonHobby nameButton="EDIÇÃO DE IMAGENS" />
+              <ButtonHobby nameButton="ESTUDAR NOVAS TECNOLOGIAS" />
+              <ButtonHobby nameButton="ASSISTIR FILMES/SÉRIES" />
+              <ButtonHobby nameButton="OUVIR MÚSICAS" />
+              <ButtonHobby nameButton="TOCAR VIOLÃO/COMPOR" />
+              <ButtonHobby nameButton="ESCREVER" />
             </div>
           </div>
         </div>

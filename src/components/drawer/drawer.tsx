@@ -1,30 +1,31 @@
 import {
     Drawer,
-    DrawerClose,
     DrawerContent,
+    DrawerClose,
     DrawerDescription,
     DrawerFooter,
     DrawerHeader,
-    DrawerTitle,
     DrawerTrigger,
   } from "@/components/ui/drawer"
-import { Button } from "../ui/button"
+import { TableRepositories } from "../tableRepositories/tableRepositories";
+
+
+
 
 
 export function DrawerComponent () {
+
+    
     return(
         <>
             <Drawer>
-                <DrawerTrigger className="bg-rose-950 py-2 rounded-lg hover:bg-zinc-800">Projetos GitHub</DrawerTrigger>
-                <DrawerContent className="bg-rose-950">
-                    <DrawerHeader>
-                        <DrawerTitle className="text-zinc-50 font-light">Isso abrirá uma página do github</DrawerTitle>
-                        <DrawerDescription>
+                <div className="flex flex-col justify-center items-center w-full h-auto gap-2">
+                    <DrawerTrigger className="bg-rose-950 w-full py-2 px-24 rounded-lg hover:bg-zinc-800">Projetos GitHub</DrawerTrigger>
+                    <p className="text-lg text-center">Projetos para análise de código ou contribuição</p>
+                </div>
 
-                        </DrawerDescription>
-                    </DrawerHeader>
-                    <DrawerFooter>
-                    </DrawerFooter>
+                <DrawerContent className="bg-rose-950 h-[65%] px-4 flex justify-center items-center">
+                    <TableRepositories />
                 </DrawerContent>
             </Drawer>
         </>
