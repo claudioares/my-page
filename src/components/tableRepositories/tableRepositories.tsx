@@ -39,7 +39,7 @@ type Repository = {
             <TableRow className="bg-rose-900">
               <TableHead className="w-[100px] text-slate-50 py-4 font-semibold">Projeto</TableHead>
               <TableHead className="text-slate-50 py-4 font-semibold">Linguagem</TableHead>
-              <TableHead className="text-slate-50 py-4 font-semibold">Ultimo Update</TableHead>
+              <TableHead className="text-slate-50 py-4 font-semibold">Ultima atualização</TableHead>
               <TableHead className="text-slate-50 text-right py-4 font-semibold">Descrição</TableHead>
             </TableRow>
           </TableHeader>
@@ -54,7 +54,7 @@ type Repository = {
                 
                   <TableCell className="py-3">{repository.name}</TableCell>
                   <TableCell>{repository.language}</TableCell>
-                  <TableCell>{repository.updated_at}</TableCell>
+                  <TableCell>{new Date(repository.updated_at).toLocaleDateString('pt-BR')}</TableCell>
                   <TableCell className="text-right">{String(repository.description) === "null" ? "N/A" : String(repository.description).split(' ').slice(0, 8).join(' ').concat('...')}</TableCell>
                 
                 </TableRow>
