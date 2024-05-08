@@ -8,6 +8,7 @@ import {
     DrawerTrigger,
   } from "@/components/ui/drawer"
 import { TableRepositories } from "../tableRepositories/tableRepositories";
+import { PaginationMode } from "../pagination/pagination";
 
 
 
@@ -24,8 +25,9 @@ export function DrawerComponent () {
                     <p className="text-lg text-center">Projetos para análise de código ou contribuição</p>
                 </div>
 
-                <DrawerContent className="bg-rose-950 h-[65%] px-4 flex justify-center items-center">
+                <DrawerContent className="bg-rose-950 flex justify-center items-center">
                     <TableRepositories />
+                    <PaginationMode />
                 </DrawerContent>
             </Drawer>
         </>
