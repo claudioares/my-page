@@ -16,6 +16,7 @@ import { MyHeader } from "@/components/Header/header";
 import { ChevronDown } from "lucide-react";
 import { DrawerComponent } from "@/components/drawer/drawer";
 import { ButtonHobby } from "@/components/buttonHobbys/button.hobby";
+import iconsStacks from "@/components/utils/icons";
 
 export default function Home() {
 
@@ -80,38 +81,63 @@ export default function Home() {
             p-4
             max-lg:flex-col-reverse lg:pl-16
           `} id="formations">
+
             <div className={`
-              lg:w-[50%]
+              lg:w-[50%] flex items-center justify-center
             `}>
               <DrawerComponent />
             </div>
             <div className="w-[50%] flex items-center justify-end pr-6">
               <Image className="w-[25rem] pb-8" src={imgAcordion} alt="imagem de decoração" />
             </div>
+
           </div>
         </div>
       </div>
-      <div className="flex w-full h-auto p-2 bg-rose-950">
+      <div className={`
+        flex flex-col w-full h-auto p-4 bg-rose-950 gap-10
+        lg:flex lg:gap-0 lg:p-2 lg:flex-row
+      `}>
          <div className={`
-            flex flex-col w-[50%] gap-4 h-auto bg-slate-950 bg-opacity-70 p-6
+            flex flex-col w-full gap-4 h-auto bg-slate-950 bg-opacity-70 p-6
+            lg:w-[50%]
           `}>
             <h1 className="text-lg text-slate-50">Formação</h1>
             <AccordionExpandDefault />
           </div>
-          <div className="">
-            algum conteudo
+          <div className={`
+            w-full flex justify-center items-center
+            lg:w-[50%] lg:px-16
+          `}>
+              <ul className={`
+                flex flex-wrap w-auto justify-center h-auto gap-8
+              `}>
+                {iconsStacks.map((icon) => (
+                  <Image className="w-16 h-16 " src={icon} alt="Icone de uma stack de programação" />
+                ))}
+              </ul>
           </div>
       </div>
 
-      <div className="w-full h-96 bg-[url('../../public/bg-sec-formation.jpg')] bg-fixed bg-center bg-cover bg-no-repeat">
-        <div className="w-full h-full bg-black bg-opacity-75 p-4">
+      <div className={`
+        flex items-center justify-center w-full h-auto bg-[url('../../public/bg-sec-formation.jpg')] bg-fixed bg-center bg-cover bg-no-repeat
+        lg:h-[30rem]
+      `}>
         <div className={`
+          w-full h-auto bg-black bg-opacity-75 p-1
+          lg:p-4 lg:h-full
+        `}>
+          <div className={`
             flex flex-col h-full w-full justify-center items-center text-white
             bg-zinc-700 bg-opacity-20
-            p-4 gap-6
-            max-lg:flex-col-reverse lg:pl-16
+            gap-2 p-4
+            lg:pl-16 lg:gap-6
+            pg:p-0 
           `}>
-            <h1 className="text-2xl">Hobbies</h1>
+            <h1 className={`
+              text-lg
+              md:text-2xl
+            `}>Hobbies</h1>
             <div className="flex flex-wrap justify-center gap-2 w-full">
               <ButtonHobby nameButton="DESIGNER GRÁFICO" />
               <ButtonHobby nameButton="EDIÇÃO DE IMAGENS" />

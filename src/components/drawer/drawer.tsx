@@ -22,7 +22,7 @@ export function DrawerComponent () {
             <Drawer>
                 <div className="flex flex-col justify-center items-center w-full h-auto gap-2">
                     <DrawerTrigger className="bg-rose-950 w-full py-2 px-24 rounded-lg hover:bg-zinc-800">Projetos GitHub</DrawerTrigger>
-                    <p className="text-lg text-center">Projetos para análise de código ou contribuição</p>
+                    <p className="text-lg text-center">Projetos para análise de código ou contribuições</p>
                 </div>
 
                 <DrawerContent className="bg-rose-950 flex justify-center items-center">
