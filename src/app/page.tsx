@@ -121,11 +121,11 @@ export default function Home() {
               <ul className={`
                 flex flex-wrap w-auto justify-center h-auto gap-8
               `}>
-                {iconsStacks.map((icon) => (
+                {iconsStacks.map((icon, index) => (
                   <Image className={`
                     w-10 h-10
                     md:w-16 md:h-16
-                  `} src={icon} alt="Icone de uma stack de programação" />
+                  `} src={icon} alt="Icone de uma stack de programação" key={index}/>
                 ))}
               </ul>
           </div>
