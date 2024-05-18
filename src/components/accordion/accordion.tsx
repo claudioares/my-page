@@ -29,7 +29,7 @@ export default function AccordionExpandDefault() {
                         </Typography>
                         <div className='flex w-auto gap-4 mt-4'>
                             {data.stacks.list.map(icon => (
-                                <Image key={key += 1} src={icon} alt='Icone da stack' />
+                                <Image className='w-10 h-10' key={key += 1} src={icon} alt='Icone da stack' />
                             ))}
                         </div>
                     </AccordionDetails>
