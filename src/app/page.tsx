@@ -30,16 +30,23 @@ export default function Home() {
     `}>
       <MyHeader />
       <div className={`
-        h-lvh max-w-full text-[#D9D9D9] bg-[url('../../public/bg.png')] bg-fixed bg-center bg-cover relative
+        w-full text-[#D9D9D9] bg-[url('../../public/bg.png')] bg-fixed bg-center bg-cover relative
         lg:h-screen lg:bg-no-repeat
       `}>
-        <div className="flex flex-col px-16 py-28 justify-center items-center bg-black bg-opacity-95 w-full h-full">
-          <div className="flex justify-end w-full h-auto px-8">
-            <BtnContact />
+        <div className={`
+          flex flex-col px-1 py-28 justify-center items-center bg-black bg-opacity-95 w-full h-full
+          sm:px-16
+        `}>
+          <div className={`
+            hidden justify-end w-full h-auto px-8
+            lg:flex
+          `}>
+            <BtnContact position="absolute" />
           </div>
 
           <div className={`
-            flex flex-col items-center justify-center w-full h-full p-12 gap-4
+            flex flex-col items-center justify-center w-full h-full p-0 gap-4
+            sm:p-12
           `}>
             <div className="flex flex-col gap-3 text-center">
               <h1 className={`
@@ -48,11 +55,13 @@ export default function Home() {
               `}>Cláudio J. A. Soares</h1>
               <h3 className={`
                 text-xl
+                lg:text-3xl
               `}>Desenvolvedor FullStack</h3>
             </div>
            <p className={`
-              w-[65%] text-center text-lg
+              w-[65%] text-center text-2xl
               lg:text-xl
+              sm:text-lg
            `}> 
               Desenvolvedor fullstack com 2 anos de experiência, 
               habilidades em trabalho colaborativo e projetos individuais. 
@@ -113,7 +122,10 @@ export default function Home() {
                 flex flex-wrap w-auto justify-center h-auto gap-8
               `}>
                 {iconsStacks.map((icon) => (
-                  <Image className="w-16 h-16 " src={icon} alt="Icone de uma stack de programação" />
+                  <Image className={`
+                    w-10 h-10
+                    md:w-16 md:h-16
+                  `} src={icon} alt="Icone de uma stack de programação" />
                 ))}
               </ul>
           </div>

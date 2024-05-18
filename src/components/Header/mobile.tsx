@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button"
 import { EnvelopeOpenIcon, GitHubLogoIcon, LinkedInLogoIcon } from "@radix-ui/react-icons"
 import { usePathname } from "next/navigation";
 import { useState } from "react";
+import { BtnContact } from "../btnContact/btnContact";
 
 
 export function MobileVersion () {
@@ -29,19 +30,28 @@ export function MobileVersion () {
                     onClick={()=>handleModalMenu()}
                 >Menu</button>
 
+                <div className={`
+                    hidden
+                    sm:w-auto sm:h-auto sm:block
+                `}>
+                    <BtnContact position="relative" />
+                </div>
+
                 {/* modal de menu mobile */}
                 {modalMenu && 
                 <section className={`
-                    fixed flex flex-col-reverse gap-8 items-center justify-center bg-zinc-950 bg-opacity-95 bottom-0 w-full h-screen right-0 z-20
+                    fixed flex flex-col-reverse px-8 gap-8 items-center justify-center bg-zinc-950 bg-opacity-95 bottom-0 w-full h-screen right-0 z-20
                     transition-all duration-1000
                     lg:hidden
                 `}>
 
-                    <div className={`
-                        w-full h-auto py-8 px-8
-                    `}>
+                    <div className="w-full h-auto flex items-center justify-between">
                         <Image src={logo} alt="logo" className="w-32"/>
+                        <div className="block sm:hidden">
+                            <BtnContact position="relative" />
+                        </div>
                     </div>
+
 
                     <ul className="flex flex-col gap-8 items-center justify-center text-green_clean text-xl">
                         {pathname === '/' ? 
