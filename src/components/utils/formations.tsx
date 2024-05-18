@@ -1,14 +1,14 @@
 'use client'
-import reactIcon from '../../../public/iconsStacks/react.svg';
-import jsIcon from '../../../public/iconsStacks/javascript.svg';
-import tsIcon from '../../../public/iconsStacks/typescript.svg';
-import nodeIcon from '../../../public/iconsStacks/nodejs.svg';
-import htmlIcon from '../../../public/iconsStacks/html5.svg';
-import cssIcon from '../../../public/iconsStacks/css3.svg';
-import mongoIcon from '../../../public/iconsStacks/mongodb.svg';
-import postgresqlIcon from '../../../public/iconsStacks/postgresql.svg';
-import tailwindIcon from '../../../public/iconsStacks/tailwindcss.svg';
-import pythonIcon from '../../../public/iconsStacks/python.svg';
+import reactIcon from '../../../public/iconsStacks/react.icon.svg';
+import jsIcon from '../../../public/iconsStacks/javascript.icon.svg';
+import tsIcon from '../../../public/iconsStacks/typescript.icon.svg';
+import nodeIcon from '../../../public/iconsStacks/nodejs.icon.svg';
+import htmlIcon from '../../../public/iconsStacks/html.icon.svg';
+import cssIcon from '../../../public/iconsStacks/css.icon.svg';
+import mongoIcon from '../../../public/iconsStacks/mongo.icon.png';
+import postgresqlIcon from '../../../public/iconsStacks/postgreesql.icon.svg';
+import tailwindIcon from '../../../public/iconsStacks/tailwind.icon.svg';
+import pythonIcon from '../../../public/iconsStacks/python.icon.svg';
 
 
 

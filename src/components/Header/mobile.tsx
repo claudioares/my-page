@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button"
 import { EnvelopeOpenIcon, GitHubLogoIcon, LinkedInLogoIcon } from "@radix-ui/react-icons"
 import { usePathname } from "next/navigation";
 import { useState } from "react";
+import { BtnContact } from "../btnContact/btnContact";
 
 
 export function MobileVersion () {
@@ -18,42 +19,51 @@ export function MobileVersion () {
     return(
         <>
             <header className={`
-                w-full h-16 bg-zinc-950 text-white flex items-center justify-between px-16 fixed z-20 top-0
+                w-full h-16 bg-zinc-950 text-white flex items-center justify-between px-16 fixed z-50 top-0
                 lg:hidden
             `}>
                 <button
                     className={`
-                    text-white bg-pink-700 w-32 h-8 rounded-lg
+                    text-white bg-rose-950 w-32 h-8 rounded-lg
                     lg:hidden
                     `}
                     onClick={()=>handleModalMenu()}
                 >Menu</button>
 
+                <div className={`
+                    hidden
+                    sm:w-auto sm:h-auto sm:block
+                `}>
+                    <BtnContact position="relative" />
+                </div>
+
                 {/* modal de menu mobile */}
                 {modalMenu && 
                 <section className={`
-                    fixed flex flex-col-reverse gap-8 items-center justify-center bg-zinc-950 bg-opacity-95 bottom-0 w-full h-screen right-0 z-20
+                    fixed flex flex-col-reverse px-8 gap-8 items-center justify-center bg-zinc-950 bg-opacity-95 bottom-0 w-full h-screen right-0 z-20
                     transition-all duration-1000
                     lg:hidden
                 `}>
 
-                    <div className={`
-                        w-full h-auto py-8 px-8
-                    `}>
+                    <div className="w-full h-auto flex items-center justify-between">
                         <Image src={logo} alt="logo" className="w-32"/>
+                        <div className="block sm:hidden">
+                            <BtnContact position="relative" />
+                        </div>
                     </div>
+
 
                     <ul className="flex flex-col gap-8 items-center justify-center text-green_clean text-xl">
                         {pathname === '/' ? 
-                        <li><Link  href='/' className="text-pink-700 underline">Home</Link></li>
+                        <li><Link  href='/' className="text-rose-950 underline">Home</Link></li>
                         :
-                        <li><Link  href='/' className="hover:text-pink-700 hover:underline">Home</Link></li>
+                        <li><Link  href='/' className="hover:text-rose-900 hover:underline">Home</Link></li>
                         }
                         
                         {pathname === '/games' ? 
-                        <li><Link href='/games' className="text-pink-700 underline">Jogos</Link></li>
+                        <li><Link href='/games' className="text-rose-950 underline">Jogos</Link></li>
                         :
-                        <li><Link href='/games' className="hover:text-pink-700 hover:underline">Jogos</Link></li>
+                        <li><Link href='/games' className="hover:text-rose-900 hover:underline">Jogos</Link></li>
                         }
 
                         {/* {pathname === '/blog' || pathname === `/blog/${pathname.split('/')[2]}`?
@@ -65,17 +75,17 @@ export function MobileVersion () {
 
                     <div className="w-auto flex flex-col gap-8">
                         <Link href="mailto:uncs.claudio.aluno@gmail.com">
-                        <Button className="w-28 h-10 bg-pink-900 flex items-center justify-center text-[0.5rem] rounded-[1rem]">
+                        <Button className="w-28 h-10 bg-rose-950 flex items-center justify-center text-[0.5rem] rounded-[1rem]">
                             <EnvelopeOpenIcon className="mr-2 h-5 w-5" /> Email
                         </Button>
                         </Link>
                         <Link href="https://github.com/claudioares?tab=repositories" target="_blank">
-                        <Button className="w-28 h-10 bg-pink-900 flex items-center justify-center text-[0.5rem] rounded-[1rem]">
+                        <Button className="w-28 h-10 bg-rose-950 flex items-center justify-center text-[0.5rem] rounded-[1rem]">
                             <GitHubLogoIcon className="mr-2 h-5 w-5" /> GitHub
                         </Button>
                         </Link>
                         <Link href="https://www.linkedin.com/in/claudio-soares-dev/" target="_blank">
-                        <Button className="w-28 h-10 bg-pink-900 flex items-center justify-center text-[0.5rem] rounded-[1rem]">
+                        <Button className="w-28 h-10 bg-rose-950 flex items-center justify-center text-[0.5rem] rounded-[1rem]">
                             <LinkedInLogoIcon className="mr-2 h-5 w-5" /> Linkedin
                         </Button>
                         </Link>

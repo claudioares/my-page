@@ -1,4 +1,5 @@
 "use client"
+import { useFetch } from "@/app/services/useFetch";
 import { ReactNode, createContext, useState } from "react";
 
 
@@ -28,13 +29,33 @@ export default function ContextProvider ({children}: {children: ReactNode}) {
     // modal erro under contruction
     const [errorPageConstruction, setErroPageConstruction]  = useState<boolean>(false);
 
+    // Para paginação
+    type Repository = {
+        name: string;
+        html_url: string;
+        updated_at: string;
+        language: string;
+        description: string;
+        homepage: string;
+        id: number
+    }
+    const { data } = useFetch<Repository[]>('https://api.github.com/users/claudioares/repos');
+    const [currentPage, setCurrentPage] = useState<number>(1);
+    const pageSize = 6;
+
+    const startIndex = (currentPage - 1) * pageSize;
+    const endIndex = startIndex + pageSize;
+
+    const paginatedData = data?.slice(startIndex, endIndex) as Repository[];
 
     return(
         <ContextApi.Provider value={{
             selectIcon, setSelectIcon, handleHiperlinkTo,
             modalContactSucess, setModalContactSucess,
             modalContactError, setModalContactError,
-            errorPageConstruction, setErroPageConstruction
+            errorPageConstruction, setErroPageConstruction,
+            currentPage, setCurrentPage, pageSize, startIndex,
+            endIndex, data, paginatedData
         }}>
             {children}
         </ContextApi.Provider>

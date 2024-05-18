@@ -4,6 +4,10 @@ import { zodResolver } from "@hookform/resolvers/zod"
 import { z } from "zod";
 import { useContext, useState } from "react";
 import { ContextApi } from "../contextApi/contextApi";
+import { DialogFooter } from "../ui/dialog";
+import { Button } from "@/components/ui/button"
+import { ModalErrorMessege } from "../modal_error_messege/modal_error_messege";
+
 
 
 // handle zod
@@ -89,17 +93,18 @@ export function InputsForms () {
     }
   };
 
-
   return(
     <>
        <form className={`
-          w-full h-auto flex flex-col gap-4 py-9 px-6
-          lg:w-[70%]
+          w-full h-auto flex flex-col gap-4 py-6 px-6
        `}>
             <div className="flex flex-col gap-2">
               <div className="flex gap-44">
                 <label htmlFor="name">Seu nome</label>
-                {nameErro && <p className="text-red-500">Por favor, digite um nome para contato.</p>}
+                {nameErro && 
+                <ModalErrorMessege 
+                  messege="Por favor, digite um nome para contato."
+                />}
               </div>
               <input 
                   className="h-11 rounded-xl pl-4 text-black w-auto" 
@@ -114,7 +119,7 @@ export function InputsForms () {
             <div className="flex flex-col gap-2">
               <div className="flex gap-44">
                 <label htmlFor="name">Seu Email</label>
-                {emailErro && <p className="text-red-500">Por favor, digite um email válido.</p>}
+                {emailErro && <ModalErrorMessege messege="Por favor, digite um email válido." />}
               </div>
               <input 
                 className="h-11 rounded-xl pl-4 text-black" 
@@ -129,7 +134,7 @@ export function InputsForms () {
             <div className="flex flex-col gap-2">
               <div className="flex gap-40">
                 <label htmlFor="name">Mensagem</label>
-                {messegeErro && <p className="text-red-500">Por favor, digite o motivo do contato.</p>}
+                {messegeErro && <ModalErrorMessege messege="Por favor, digite o motivo do contato." />}
               </div>
               <textarea 
                 className="h-40 rounded-xl p-4 text-black" 
@@ -140,22 +145,22 @@ export function InputsForms () {
                 onChange={(e)=>setMessege(e.target.value)}
               />
             </div>
-            <div className="flex w-full items-center justify-center">
+            <DialogFooter className="flex w-full items-center justify-center">
 
               {!loadingButton && 
-              <button className={`
+              <Button className={`
                 bg-green-700 w-36 h-12 rounded-xl
                 hover:bg-green-600
               `}
-              onClick={handleSubmit(handleInputsForm)}>Enviar</button>}
+              onClick={handleSubmit(handleInputsForm)}>Enviar</Button>}
 
               {loadingButton && 
-              <button className={`
+              <Button className={`
                 bg-green-700 w-36 h-12 rounded-xl
                 hover:bg-green-600
                 animate-pulse duration-700
-              `}>Enviando...</button>}
-            </div>
+              `}>Enviando...</Button>}
+            </DialogFooter>
         </form>
     </>
   )
