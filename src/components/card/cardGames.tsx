@@ -7,6 +7,7 @@ import game01 from '../../../public/gamesImagens/game01.jpg';
 import game02 from '../../../public/gamesImagens/game02.jpg';
 import game03 from '../../../public/gamesImagens/game03.jpg';
 import game04 from '../../../public/gamesImagens/game04.jpg';
+import game05 from '../../../public/gamesImagens/game05.png';
 
 
 import ImageNext from "next/image";
@@ -40,6 +41,13 @@ const images = [
     title: 'Game 04',
     width: '33.3%',
     link: 'https://relaxed-shortbread-8137dc.netlify.app/'
+  },
+  {
+    id: '05',
+    img: game05,
+    title: 'Game 05',
+    width: '33.3%',
+    link: 'https://adivinhe-a-palavra.netlify.app/'
   },
 ];
 
