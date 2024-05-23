@@ -10,15 +10,20 @@ export type ContextProps = {
 export const ContextApi = createContext<ContextProps>({} as ContextProps);
 
 
+
 export default function ContextProvider ({children}: {children: ReactNode}) {
     const [selectIcon, setSelectIcon] = useState<any>('') as any
 
     interface IhyperlinkPropsType {
-        inputClass: string;
+        inputClass: string,
+        href: string | null
     }
-    function handleHiperlinkTo (inputClass: IhyperlinkPropsType) {
-    const elementSelect = document.getElementById(inputClass.toString());
+
+    function handleHiperlinkTo ({ inputClass, href }: IhyperlinkPropsType) {
+        const elementSelect = document.getElementById(inputClass);
         elementSelect?.scrollIntoView({ behavior: 'smooth' });
+        
+        if (href) window.location.href = `${href}`
     }
 
 

@@ -75,20 +75,25 @@ export function MobileVersion () {
 
                     <div className="w-auto flex flex-col gap-8">
                         <Link href="mailto:uncs.claudio.aluno@gmail.com">
-                        <Button className="w-28 h-10 bg-rose-950 flex items-center justify-center text-[0.5rem] rounded-[1rem]">
-                            <EnvelopeOpenIcon className="mr-2 h-5 w-5" /> Email
-                        </Button>
+                            <Button className="w-28 h-10 bg-rose-950 flex items-center justify-center text-[0.5rem] rounded-[1rem]">
+                                <EnvelopeOpenIcon className="mr-2 h-5 w-5" /> Email
+                            </Button>
                         </Link>
                         <Link href="https://github.com/claudioares?tab=repositories" target="_blank">
-                        <Button className="w-28 h-10 bg-rose-950 flex items-center justify-center text-[0.5rem] rounded-[1rem]">
-                            <GitHubLogoIcon className="mr-2 h-5 w-5" /> GitHub
-                        </Button>
+                            <Button className="w-28 h-10 bg-rose-950 flex items-center justify-center text-[0.5rem] rounded-[1rem]">
+                                <GitHubLogoIcon className="mr-2 h-5 w-5" /> GitHub
+                            </Button>
                         </Link>
                         <Link href="https://www.linkedin.com/in/claudio-soares-dev/" target="_blank">
-                        <Button className="w-28 h-10 bg-rose-950 flex items-center justify-center text-[0.5rem] rounded-[1rem]">
-                            <LinkedInLogoIcon className="mr-2 h-5 w-5" /> Linkedin
-                        </Button>
+                            <Button className="w-28 h-10 bg-rose-950 flex items-center justify-center text-[0.5rem] rounded-[1rem]">
+                                <LinkedInLogoIcon className="mr-2 h-5 w-5" /> Linkedin
+                            </Button>
                         </Link>
+                        {/* <Link href="https://wa.me/5598985704059" target="_blank">
+                            <Button className="w-24 h-6 bg-pink-900 flex items-center justify-center text-[0.5rem] rounded-[1rem] hover:bg-slate-900">
+                                <LinkedInLogoIcon className="mr-2 h-3 w-3" /> Whatsapp
+                             </Button>
+                        </Link> */}
                     </div>
                     <Button
                         onClick={()=>setModalMenu(false)}

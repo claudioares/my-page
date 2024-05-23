@@ -69,7 +69,6 @@ export default function Home() {
               eficientes e projetos bem-sucedidos como freelancer.
            </p>
            <div className="flex gap-4 w-auto px-1 mt-12">
-             <BtnHyperLink btnTo="projects" href="" />
              <BtnHyperLink btnTo="Saiba mais ..." href="/aboutme"/>
            </div>
           </div>
