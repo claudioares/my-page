@@ -4,6 +4,7 @@ import pj03 from '../../../src/assets/img_apps/pro3.png';
 import pj04 from '../../../src/assets/img_apps/pro4.png';
 import pj05 from '../../../src/assets/img_apps/pro5.png';
 import pj06 from '../../../src/assets/img_apps/pro6.png';
+import pj07 from '../../../src/assets/img_apps/pro7.png';
 
 export const informProjects = [
     {
@@ -47,5 +48,12 @@ export const informProjects = [
       title: 'Projeto 06',
       width: '33.3%',
       link:"https://palcoonline.netlify.app/"
+    },
+    {
+      id: '07',
+      url: pj07,
+      title: 'Projeto 07',
+      width: '33.3%',
+      link:"https://challenge-alura-geek-theta.vercel.app/"
     },
   ];

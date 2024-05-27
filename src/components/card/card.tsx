@@ -30,7 +30,7 @@ const images = [
     url: pj02,
     title: 'Projeto 02',
     width: '33.3%',
-    link:"https://dricasalgados.netlify.app/"
+    link:"https://challenge-alura-geek-theta.vercel.app/"
   },
   {
     id: '03',
@@ -130,7 +130,7 @@ export function Card() {
       {errorPageConstruction && <PageUnderConstruction />}
       <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center',  flexWrap: 'wrap', minWidth: 300, width: '100%' }} id="projects">
         <div className={`
-          flex flex-wrap items-center justify-center w-full gap-2 
+          flex flex-wrap items-center justify-center w-full h-[25rem] gap-2 overflow-x-auto
           md:gap-0
         `}>
           {images.map((image) => (
@@ -139,6 +139,7 @@ export function Card() {
               key={image.id}
               style={{
                 width: image.width,
+                border: '3px solid #510924'
               }}
             >
               <ImageNext fill={true} src={image.url} alt='Imagem do projeto' />
