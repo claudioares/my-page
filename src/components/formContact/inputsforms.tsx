@@ -51,6 +51,14 @@ export function InputsForms () {
     setEmail("");
     setMessege("");
 
+    setTimeout(()=>{
+      setLoadingButton(false);
+      setModalContactSucess(true);
+      setTimeout(()=>{
+        setModalContactSucess(false);
+      }, 4000);
+    }, 5000)
+    
     try {
       const response = await fetch(API_MESSEGE_URL || "https://my-page-api-contacts.onrender.com/messegeclient" , {
         method: 'POST',
@@ -73,12 +81,6 @@ export function InputsForms () {
             'content-type': 'application/json'
           }
         });
-
-        setLoadingButton(false);
-        setModalContactSucess(true);
-        setTimeout(()=>{
-          setModalContactSucess(false);
-        }, 4000);
       }
     } catch (error) {
       console.log("Error during transaction. ", error)
