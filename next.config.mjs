@@ -3,7 +3,8 @@ const nextConfig = {
     reactStrictMode: true,
     images: {
         domains:[
-            "img.freepik.com"
+            "img.freepik.com",
+            'personal-portifolio-page.netlify.app'
         ]
     }
 };

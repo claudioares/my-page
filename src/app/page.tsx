@@ -1,5 +1,4 @@
 "use client"
-import { Card } from "@/components/card/card";
 import BasicSpeedDial from "@/components/speed/speed";
 import { Modal } from "@/components/modal/modal";
 import AccordionExpandDefault from "@/components/accordion/accordion";
@@ -17,6 +16,8 @@ import { ChevronDown } from "lucide-react";
 import { DrawerComponent } from "@/components/drawer/drawer";
 import { ButtonHobby } from "@/components/buttonHobbys/button.hobby";
 import iconsStacks from "@/components/utils/icons";
+import { CardProjects } from "@/components/card/cardProjects";
+import { projectsData } from "@/components/utils/projects";
 
 export default function Home() {
 
@@ -77,8 +78,22 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="flex flex-col items-center justify-center h-auto bg-pink-950 text-white" id="projects">
-          <Card />
+      <div className="flex flex-col flex-wrap gap-3 items-center justify-center h-auto py-8 bg-black  text-white" id="projects">
+          <h1 className="text-2xl font-semibold">Projetos</h1>
+          <div className="flex flex-wrap items-center justify-center gap-5 py-10 px-2">
+            {projectsData.map((project) => (
+                <CardProjects
+                id={project.id}
+                span={project.span}
+                title={project.title}
+                description={project.description}
+                img={project.url}
+                href={project.link}
+                key={project.id}
+              />
+            ))
+          }
+          </div>
       </div>
 
       <div className="bg-[url('../../public/bg-sec-03.png')] bg-fixed bg-center bg-cover bg-no-repeat">
