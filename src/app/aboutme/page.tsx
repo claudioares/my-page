@@ -1,10 +1,13 @@
+'use client'
 import Image from "next/image";
 import imgMe from "../../../public/me/ft06.png"
 import { BtnHyperLink } from "@/components/btnHyperLink/btnHyperlink";
+import { LoadingPage } from "@/components/loading/loading_page";
 
 export default function Aboutme () {
     return(
         <>
+        <LoadingPage>
             <div className="flex flex-col gap-10 h-screen pb-10 bg-gray-950 overflow-auto">
                 <header className={`
                     relative flex flex-col gap-6 w-full h-80 bg-sky-900 text-white px-8 py-4
@@ -174,6 +177,7 @@ export default function Aboutme () {
                 </div>
                 <BtnHyperLink btnTo="Home" href="/" />
             </div>
+        </LoadingPage>
         </>
     )
 }
