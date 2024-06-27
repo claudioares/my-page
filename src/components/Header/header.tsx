@@ -4,6 +4,7 @@ import logo from '../../../public/logo.svg';
 import Link from 'next/link';
 import { usePathname } from "next/navigation";
 import { MobileVersion } from "./mobile";
+import { SocialMidia } from "../socialRedes/socialMidia";
 
 
 
@@ -21,6 +22,8 @@ export function MyHeader() {
       }>
         <Image src={logo} alt="logo" className="w-44"/>
 
+        <SocialMidia />
+
         <ul className="flex h-[100%] justify-around w-96 items-center text-green_clean text-lg">
           {pathname === '/' ? 
             <li><Link  href='/' className="text-rose-500">Home</Link></li>
@@ -34,11 +37,11 @@ export function MyHeader() {
             <li><Link href='/games' className="hover:text-zinc-400 hover:underline">Jogos</Link></li>
           }
 
-          {/* {pathname === '/blog' || pathname === `/blog/${pathname.split('/')[2]}`?
+          {pathname === '/blog' ?
             <li><Link href='/blog' className="text-pink-700 underline">Blog</Link></li>
             :
             <li><Link href='/blog' className="hover:text-pink-700 hover:underline">Blog</Link></li>
-          } */}
+          }
 
         </ul>
 
